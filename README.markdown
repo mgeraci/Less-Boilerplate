@@ -20,6 +20,6 @@ Usage:
 --------
 Include this file in at the top of your LESS stylesheet:
 
-    @import 'boilerplate'
+    @import 'boilerplate';
 
 Enjoy!

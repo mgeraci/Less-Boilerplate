@@ -45,7 +45,7 @@ div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, 
 .gradientH(@start, @end){
   background: @start; // Non CSS3 browsers
   background: -moz-linear-gradient(left,  @start, @end); // FF 3.6+
-  background: -webkit-gradient(linear, left center, left center, from(@start), to(@end)); // Safari 4+, Chrome
+  background: -webkit-gradient(linear, left center, right center, from(@start), to(@end)); // Safari 4+, Chrome
   filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d, GradientType=1)", @start, @end); // IE6 & 7
   -ms-filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d, GradientType=1)", @start, @end); // IE8
 }
@@ -109,7 +109,7 @@ div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, 
 //</div>
 
 .outer{
-  float: left;
+  .floatClear;
   position: relative;
   left: 50%;
 }

@@ -148,3 +148,113 @@ img {
 ul {
   list-style-type: none;
 }
+body {
+  background: #5f9cad;
+}
+a {
+  color: #000;
+}
+a:hover {
+  color: #2d6a7b;
+}
+#header {
+  background: #355f6b;
+  padding: 20px 0;
+  color: #cccccc;
+  letter-spacing: 0.1em;
+  font-style: oblique;
+  float: left;
+}
+h1 {
+  display: inline;
+  font-weight: bold;
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.1em;
+  font-size: 30px;
+  text-shadow: 0px -1px rgba(0, 0, 0, 0.5);
+  float: left;
+  margin: 0 20px 0 0;
+}
+.note {
+  font-style: oblique;
+  color: #cccccc;
+  font-size: 20px;
+}
+.wrapOut {
+  padding: 50px 0;
+}
+.box {
+  float: left;
+  clear: both;
+  padding: 15px;
+  width: 200px;
+  margin: 0 0 20px 0;
+}
+#box1 {
+  float: left;
+  clear: both;
+  padding: 15px;
+  width: 200px;
+  margin: 0 0 20px 0;
+  background: #e3a6d8;
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-box-shadow: 2px 2px 10px #000000;
+  -webkit-box-shadow: 2px 2px 10px #000000;
+  box-shadow: 2px 2px 10px #000000;
+}
+#gradient1 {
+  float: left;
+  clear: both;
+  padding: 15px;
+  width: 200px;
+  margin: 0 0 20px 0;
+  background: #e3a6d8;
+  background: -moz-linear-gradient(top, #e3a6d8, #ff0000);
+  background: -webkit-gradient(linear, left top, left bottom, from(#e3a6d8), to(#ff0000));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e3a6d8, endColorstr=#ff0000);
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e3a6d8, endColorstr=#ff0000);
+}
+#gradient2 {
+  float: left;
+  clear: both;
+  padding: 15px;
+  width: 200px;
+  margin: 0 0 20px 0;
+  background: #e3a6d8;
+  background: -moz-linear-gradient(left, #e3a6d8, #ff0000);
+  background: -webkit-gradient(linear, left center, right center, from(#e3a6d8), to(#ff0000));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e3a6d8, endColorstr=#ff0000, GradientType=1);
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e3a6d8, endColorstr=#ff0000, GradientType=1);
+}
+#left {
+  float: left;
+  width: 268px;
+  margin: 0 20px 0 0;
+}
+#right {
+  float: left;
+  width: 576px;
+  font-style: oblique;
+  color: #cccccc;
+  font-size: 20px;
+  padding: 90px 0 0 0;
+}
+#centeredContent {
+  background: #e3a6d8;
+  border: 1px solid #b174a6;
+  padding: 20px;
+}
+#centeredContent a span {
+  display: none;
+}
+#centeredContent a:hover > span {
+  display: inline;
+}
+#callContainer {
+  font-style: oblique;
+  color: #cccccc;
+  font-size: 20px;
+}
