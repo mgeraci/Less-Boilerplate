@@ -169,7 +169,7 @@ h1 {
   display: inline;
   font-weight: bold;
   font-style: normal;
-  color: rgba(255, 255, 255, 0.9);
+  color: #eee;
   letter-spacing: 0.1em;
   font-size: 30px;
   text-shadow: 0px -1px rgba(0, 0, 0, 0.5);
@@ -177,9 +177,9 @@ h1 {
   margin: 0 20px 0 0;
 }
 .note {
-  font-style: oblique;
   color: #cccccc;
   font-size: 20px;
+  text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
 }
 .wrapOut {
   padding: 50px 0;
@@ -188,14 +188,14 @@ h1 {
   float: left;
   clear: both;
   padding: 15px;
-  width: 200px;
+  width: 250px;
   margin: 0 0 20px 0;
 }
 #box1 {
   float: left;
   clear: both;
   padding: 15px;
-  width: 200px;
+  width: 250px;
   margin: 0 0 20px 0;
   background: #e3a6d8;
   border-radius: 15px;
@@ -209,38 +209,38 @@ h1 {
   float: left;
   clear: both;
   padding: 15px;
-  width: 200px;
+  width: 250px;
   margin: 0 0 20px 0;
   background: #e3a6d8;
-  background: -moz-linear-gradient(top, #e3a6d8, #ff0000);
-  background: -webkit-gradient(linear, left top, left bottom, from(#e3a6d8), to(#ff0000));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e3a6d8, endColorstr=#ff0000);
-  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e3a6d8, endColorstr=#ff0000);
+  background: -moz-linear-gradient(top, #e3a6d8, #ff6464);
+  background: -webkit-gradient(linear, left top, left bottom, from(#e3a6d8), to(#ff6464));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e3a6d8, endColorstr=#ff6464);
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e3a6d8, endColorstr=#ff6464);
 }
 #gradient2 {
   float: left;
   clear: both;
   padding: 15px;
-  width: 200px;
+  width: 250px;
   margin: 0 0 20px 0;
   background: #e3a6d8;
-  background: -moz-linear-gradient(left, #e3a6d8, #ff0000);
-  background: -webkit-gradient(linear, left center, right center, from(#e3a6d8), to(#ff0000));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e3a6d8, endColorstr=#ff0000, GradientType=1);
-  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e3a6d8, endColorstr=#ff0000, GradientType=1);
+  background: -moz-linear-gradient(left, #e3a6d8, #ff6464);
+  background: -webkit-gradient(linear, left center, right center, from(#e3a6d8), to(#ff6464));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e3a6d8, endColorstr=#ff6464, GradientType=1);
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e3a6d8, endColorstr=#ff6464, GradientType=1);
 }
 #left {
   float: left;
-  width: 268px;
+  width: 316px;
   margin: 0 20px 0 0;
 }
 #right {
   float: left;
   width: 576px;
-  font-style: oblique;
   color: #cccccc;
   font-size: 20px;
-  padding: 90px 0 0 0;
+  text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
+  padding: 170px 0 0 0;
 }
 #centeredContent {
   background: #e3a6d8;
@@ -254,7 +254,10 @@ h1 {
   display: inline;
 }
 #callContainer {
-  font-style: oblique;
   color: #cccccc;
   font-size: 20px;
+  text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
+}
+#callContainer a {
+  text-shadow: 0 0;
 }
