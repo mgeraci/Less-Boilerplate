@@ -1,77 +1,87 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset='utf-8'>
-
-  <title>mgeraci/Less-Boilerplate @ GitHub</title>
-
-  <style type="text/css">
-    body {
-      margin-top: 1.0em;
-      background-color: #3858b6;
-      font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #ffffff;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-    h1 { font-size: 3.8em; color: #c7a749; margin-bottom: 3px; }
-    h1 .small { font-size: 0.4em; }
-    h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #c7a749; }
-    h3 { text-align: center; color: #c7a749; }
-    a { color: #c7a749; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-    pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-  </style>
-</head>
-
-<body>
-  <a href="http://github.com/mgeraci/Less-Boilerplate"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
-
-  <div id="container">
-
-    <div class="download">
-      <a href="http://github.com/mgeraci/Less-Boilerplate/zipball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
-      <a href="http://github.com/mgeraci/Less-Boilerplate/tarball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
+<html lang="en">
+  <head>
+    <title>mgeraci/Less-Boilerplate @ GitHub</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <a href="http://github.com/mgeraci/Less-Boilerplate"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+    <div id="header" class="wrapOut">
+      <div class="wrapIn">
+        <h1>Less Boilerplate Demo Page</h1>
+        this header section (and each section below) uses the .wrapOut and .wrapIn classes
+      </div>
     </div>
-
-    <h1><a href="http://github.com/mgeraci/Less-Boilerplate">Less-Boilerplate</a>
-      <span class="small">by <a href="http://github.com/mgeraci">mgeraci</a></span></h1>
-
-    <div class="description">
-      The Less.CSS file full of helpers that I use in my design projects.
+    <div class="wrapOut">
+      <div class="wrapIn">
+        <div class="description">
+          I went through my recent design projects and pulled out the common styles among them. Here they are for your design pleasure!
+          <br>
+          <br>Written in Less.CSS.
+        </div>
+      </div>
     </div>
-
-    <h2>Authors</h2>
-<p>Michael P. Geraci (michael@reducify.com)<br/><br/>      </p>
-<h2>Contact</h2>
-<p>Michael P. Geraci (mgeraci@gmail.com)<br/>      </p>
-
-
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="http://github.com/mgeraci/Less-Boilerplate/zipball/master">zip</a> or
-      <a href="http://github.com/mgeraci/Less-Boilerplate/tarball/master">tar</a> formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/mgeraci/Less-Boilerplate</pre>
-    </p>
-
-    <div class="footer">
-      get the source code on GitHub : <a href="http://github.com/mgeraci/Less-Boilerplate">mgeraci/Less-Boilerplate</a>
+    <div id="content1" class="wrapOut">
+      <div class="wrapIn">
+        <div id="left">
+          <div id="box1">
+            Here's a rounded div with a nice shadow...
+            <br>
+            <br>.borderRadius(15px);
+            <br>.boxShadow(2px, 2px, 10px, #000);
+          </div>
+          <div id="gradient1">
+            ...another with a gradient...
+            <br>
+            <br>.gradientV(@lavender, @red);
+          </div>
+          <div id="gradient2">
+            ...and a gradient going the other way.
+            <br>
+            <br>.gradientH(@lavender, @red);
+          </div>
+        </div>
+        <div id="right">
+          They're stacked on top of each other using the .floatClear class
+        </div>
+      </div>
     </div>
-
-  </div>
-
-  
-</body>
+    <div class="wrapOut">
+      <div class="wrapIn">
+        <div class="outer">
+          <div id="centeredContent" class="inner">
+            This is variable width, but always centered. <a href="#">Hover here to try it!<span>&nbsp;&nbsp;&nbsp;&nbsp;See? Still centered.</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="callContainer" class="wrapOut">
+      <div class="wrapIn">
+        And if you want someone to click a button, you might want to make it shiny:
+        <br><a href="#" class="callToAction">click me</a>
+        <br>
+        <br>
+        <br>
+        <br><a href="https://github.com/mgeraci/Less-Boilerplate">View source on github</a> | <a href="http://www.lesscss.org">LessCSS home</a>
+      </div>
+    </div>
+    <div class="wrapOut">
+      <div class="wrapIn">
+        <h2>Download</h2>
+        <p>
+          You can download this project in either
+          <a href="http://github.com/mgeraci/Less-Boilerplate/zipball/master">zip</a> or
+          <a href="http://github.com/mgeraci/Less-Boilerplate/tarball/master">tar</a> formats.
+        </p>
+        <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
+          by running:
+          <pre>$ git clone git://github.com/mgeraci/Less-Boilerplate</pre>
+        </p>
+        <div class="footer">
+          get the source code on GitHub : <a href="http://github.com/mgeraci/Less-Boilerplate">mgeraci/Less-Boilerplate</a>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

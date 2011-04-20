@@ -1,0 +1,300 @@
+/* ====================================================== */
+/* =           Boilerplate Less CSS Styles              = */
+/* = by Michael P. Geraci, 2011 - www.michaelgeraci.com = */
+/* =           mgeraci@gmail.com | @mgeraci             = */
+/* =          free for all to use and modify            = */
+/* ====================================================== */
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+code,
+del,
+dfn,
+em,
+img,
+q,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+hr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+}
+/* ================ */
+/* = CSS3 Helpers = */
+/* ================ */
+/* =========================== */
+/* = Centered Content Blocks = */
+/* =========================== */
+.wrapOut {
+  width: 100%;
+  float: left;
+  clear: both;
+  min-width: 960px;
+}
+.wrapIn {
+  width: 960px;
+  margin: 0 auto;
+}
+/* ====================================================== */
+/* = Horizontal Centering for Objects of Variable Width = */
+/* ====================================================== */
+.outer {
+  float: left;
+  clear: both;
+  position: relative;
+  left: 50%;
+}
+.inner {
+  position: relative;
+  left: -50%;
+}
+/* ========================= */
+/* = Call To Action Button = */
+/* ========================= */
+.callToAction {
+  float: left;
+  clear: both;
+  margin: 10px 0 0 0;
+  padding: 4px 13px 2px 13px;
+  font-size: 30px;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  text-shadow: rgba(0, 0, 0, 0.2) -1px 0, rgba(0, 0, 0, 0.2) 0 -1px, rgba(255, 255, 255, 0.2) 0 1px;
+  border: 1px solid #974000;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-box-shadow: 0px 0px 2px #974000;
+  -webkit-box-shadow: 0px 0px 2px #974000;
+  box-shadow: 0px 0px 2px #974000;
+  background: #db8412;
+  background: -moz-linear-gradient(top, #ec9523, #ec9523 46%, #c97200 54%, #c97200);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ec9523), color-stop(0.46, #ec9523), color-stop(0.54, #c97200), to(#c97200));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ec9523, endColorstr=#c97200);
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ec9523, endColorstr=#c97200);
+}
+.callToAction:hover {
+  color: #fff;
+  background: #c77000;
+  background: -moz-linear-gradient(top, #d8810f, #d8810f 46%, #b55e00 54%, #b55e00);
+  background: -webkit-gradient(linear, left top, left bottom, from(#d8810f), color-stop(0.46, #d8810f), color-stop(0.54, #b55e00), to(#b55e00));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#d8810f, endColorstr=#b55e00);
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#d8810f, endColorstr=#b55e00);
+}
+.callToAction:active {
+  color: #fff;
+  background: #b35c00;
+  background: -moz-linear-gradient(top, #c46d00, #c46d00 46%, #a14a00 54%, #a14a00);
+  background: -webkit-gradient(linear, left top, left bottom, from(#c46d00), color-stop(0.46, #c46d00), color-stop(0.54, #a14a00), to(#a14a00));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#c46d00, endColorstr=#a14a00);
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#c46d00, endColorstr=#a14a00);
+}
+/* ================== */
+/* = General Styles = */
+/* ================== */
+html {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: helvetica, arial, verdana, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+.floatClear {
+  float: left;
+  clear: both;
+}
+img {
+  border: 0;
+}
+ul {
+  list-style-type: none;
+}
+body {
+  background: #5f9cad;
+}
+a {
+  color: #000;
+}
+a:hover {
+  color: #2d6a7b;
+}
+#header {
+  background: #355f6b;
+  padding: 20px 0;
+  color: #cccccc;
+  letter-spacing: 0.1em;
+  font-style: oblique;
+  float: left;
+}
+h1 {
+  display: inline;
+  font-weight: bold;
+  font-style: normal;
+  color: #eee;
+  letter-spacing: 0.1em;
+  font-size: 30px;
+  text-shadow: 0px -1px rgba(0, 0, 0, 0.5);
+  float: left;
+  margin: 0 20px 0 0;
+}
+.note {
+  color: #eee;
+  font-size: 20px;
+  text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
+}
+.wrapOut {
+  padding: 50px 0;
+}
+.box {
+  float: left;
+  clear: both;
+  padding: 15px;
+  width: 250px;
+  margin: 0 0 20px 0;
+}
+#box1 {
+  float: left;
+  clear: both;
+  padding: 15px;
+  width: 250px;
+  margin: 0 0 20px 0;
+  background: #e3a6d8;
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-box-shadow: 2px 2px 10px #000000;
+  -webkit-box-shadow: 2px 2px 10px #000000;
+  box-shadow: 2px 2px 10px #000000;
+}
+#gradient1 {
+  float: left;
+  clear: both;
+  padding: 15px;
+  width: 250px;
+  margin: 0 0 20px 0;
+  background: #e3a6d8;
+  background: -moz-linear-gradient(top, #e3a6d8, #ff6464);
+  background: -webkit-gradient(linear, left top, left bottom, from(#e3a6d8), to(#ff6464));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e3a6d8, endColorstr=#ff6464);
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e3a6d8, endColorstr=#ff6464);
+}
+#gradient2 {
+  float: left;
+  clear: both;
+  padding: 15px;
+  width: 250px;
+  margin: 0 0 20px 0;
+  background: #e3a6d8;
+  background: -moz-linear-gradient(left, #e3a6d8, #ff6464);
+  background: -webkit-gradient(linear, left center, right center, from(#e3a6d8), to(#ff6464));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e3a6d8, endColorstr=#ff6464, GradientType=1);
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e3a6d8, endColorstr=#ff6464, GradientType=1);
+}
+#left {
+  float: left;
+  width: 316px;
+  margin: 0 20px 0 0;
+}
+#right {
+  float: left;
+  width: 576px;
+  color: #eee;
+  font-size: 20px;
+  text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
+  padding: 170px 0 0 0;
+}
+#centeredContent {
+  background: #e3a6d8;
+  border: 1px solid #b174a6;
+  padding: 20px;
+}
+#centeredContent a span {
+  display: none;
+}
+#centeredContent a:hover > span {
+  display: inline;
+}
+#callContainer {
+  color: #eee;
+  font-size: 20px;
+  text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
+}
+#callContainer a {
+  text-shadow: 0 0;
+}
+h1 .small {
+  font-size: 0.4em;
+}
+h1 a {
+  text-decoration: none;
+}
+h2 {
+  font-size: 1.5em;
+  color: #c7a749;
+}
+h3 {
+  text-align: center;
+  color: #c7a749;
+}
+.description {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+.download {
+  float: right;
+}
+pre {
+  background: #000;
+  color: #fff;
+  padding: 15px;
+}
+hr {
+  border: 0;
+  width: 80%;
+  border-bottom: 1px solid #aaaaaa;
+}
+.footer {
+  text-align: center;
+  padding-top: 30px;
+  font-style: italic;
+}

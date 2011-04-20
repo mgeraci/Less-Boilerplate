@@ -1,0 +1,124 @@
+// Less Boilerplate Demo Page
+
+// import the boilerplate less file
+@import 'boilerplate';
+
+// variables
+@blue: #5F9CAD;
+@lavender: #E3A6D8;
+@red: #f00 + 100%;
+@gray: #ccc;
+
+// bg color
+body{background: @blue;}
+
+// general link color
+a{color: #000;}
+a:hover{color: @blue - 50%;}
+
+#header{
+  background: desaturate(@blue, 10%) - 54%;
+  padding: 20px 0;
+  color: @gray;
+  letter-spacing: 0.1em;
+  font-style: oblique;
+  float: left;
+}
+
+// used in header
+h1{
+  display: inline;
+  font-weight: bold;
+  font-style: normal;
+  color: #eee;
+  letter-spacing: 0.1em;
+  font-size: 30px;
+  text-shadow: 0px -1px rgba(0,0,0,0.5);
+  float: left;
+  margin: 0 20px 0 0;
+}
+
+// style for the notes
+.note{
+  color: #eee;
+  font-size: 20px;
+  text-shadow: 0 -1px rgba(0,0,0,0.3);
+}
+
+// give some padding to the content sections
+.wrapOut{padding: 50px 0;}
+
+// stacked box style
+.box{
+  .floatClear;
+  padding: 15px;
+  width: 250px;
+  margin: 0 0 20px 0;
+}
+
+// round and shadow
+#box1{
+  .box;
+  background: @lavender;
+  .borderRadius(15px);
+  .boxShadow(2px, 2px, 10px, #000);
+}
+
+// vertical gradient
+#gradient1{
+  .box;
+  .gradientV(@lavender, @red);
+}
+
+// horizontal gradient
+#gradient2{
+  .box;
+  .gradientH(@lavender, @red);
+}
+
+// holds the boxes
+#left{
+  float: left;
+  width: @bodyWidth * 0.35 - 20;
+  margin: 0 20px 0 0;
+}
+
+// holds the note about boxes
+#right{
+  float: left;
+  width: @bodyWidth * 0.6;
+  .note;
+  padding: 170px 0 0 0;
+}
+
+// centering variable width
+#centeredContent{
+  background: @lavender;
+  border: 1px solid @lavender - 50%;
+  padding: 20px;
+  
+  a span{
+    display: none;
+  }
+
+  a:hover > span{
+    display: inline;
+  }
+}
+
+#callContainer{
+  .note;
+  
+  a{text-shadow: 0 0;}
+}
+
+// github styles
+h1 .small { font-size: 0.4em; }
+h1 a { text-decoration: none }
+h2 { font-size: 1.5em; color: #c7a749; }
+h3 { text-align: center; color: #c7a749; }
+.description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px;}
+.download { float: right; }
+pre { background: #000; color: #fff; padding: 15px;}
+hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+.footer { text-align:center; padding-top:30px; font-style: italic; }

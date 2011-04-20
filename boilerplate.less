@@ -1,0 +1,217 @@
+/* ====================================================== */
+/* =           Boilerplate Less CSS Styles              = */
+/* = by Michael P. Geraci, 2011 - www.michaelgeraci.com = */
+/* =           mgeraci@gmail.com | @mgeraci             = */
+/* =          free for all to use and modify            = */
+/* ====================================================== */
+
+
+// CSS Reset
+div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, table, caption, tbody, tfoot, thead, tr, th, td, hr{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+}
+
+
+/* ================ */
+/* = CSS3 Helpers = */
+/* ================ */
+
+// Rounded Corners
+.borderRadius(@radius){
+  border-radius: @radius; // Opera 10.5, IE 9, Saf5, Chrome
+  -moz-border-radius: @radius; // FF 1+
+  -webkit-border-radius: @radius; // FF 1+
+}
+
+// Top-to-Bottom Gradient
+.gradientV(@start, @end){
+  background: @start; // Non CSS3 browsers
+  background: -moz-linear-gradient(top,  @start, @end); // FF 3.6+
+  background: -webkit-gradient(linear, left top, left bottom, from(@start), to(@end)); // Safari 4+, Chrome
+  filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d)", @start, @end); // IE6 & 7
+  -ms-filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d)", @start, @end); // IE8
+}
+
+// Left-to-Right Gradient
+.gradientH(@start, @end){
+  background: @start; // Non CSS3 browsers
+  background: -moz-linear-gradient(left,  @start, @end); // FF 3.6+
+  background: -webkit-gradient(linear, left center, right center, from(@start), to(@end)); // Safari 4+, Chrome
+  filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d, GradientType=1)", @start, @end); // IE6 & 7
+  -ms-filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d, GradientType=1)", @start, @end); // IE8
+}
+
+// Drop shadow
+.boxShadow(@xOffset, @yOffset, @blur, @color){
+  -moz-box-shadow: @xOffset @yOffset @blur @color; // FF3.5+
+  -webkit-box-shadow: @xOffset @yOffset @blur @color; // Saf3.0+, Chrome
+  box-shadow: @xOffset @yOffset @blur @color; // Opera 10.5, IE9+, Chrome 10+
+}
+
+
+/* =========================== */
+/* = Centered Content Blocks = */
+/* =========================== */
+
+// For designs that involve a centered column of fixed with, I've for that
+// for great browser compatability, it's useful to separate page elements
+// into discreet horizontal chunks when possible. These two styles help
+// handle this.
+//
+// example:
+// <div class="wrapOut">
+//   <div class="wrapIn">
+//     header content here
+//   </div>
+// </div>
+// <div class="wrapOut">
+//   <div class="wrapIn">
+//     your main content goes here
+//   </div>
+// </div>
+// <div class="wrapOut">
+//   <div id="footer" class="wrapIn">
+//     your footer goes here
+//   </div>
+// </div>
+
+// set the width of your body column
+@bodyWidth: 960px;
+
+.wrapOut{
+  width: 100%;
+  .floatClear;
+  min-width: @bodyWidth;
+}
+
+.wrapIn{
+  width: @bodyWidth;
+  margin: 0 auto;
+}
+
+
+/* ====================================================== */
+/* = Horizontal Centering for Objects of Variable Width = */
+/* ====================================================== */
+
+// example:
+//<div class="outer">
+//  <div class="inner">The amount of text in this div could change, and it would still be centered</div>
+//</div>
+
+.outer{
+  .floatClear;
+  position: relative;
+  left: 50%;
+}
+
+.inner{
+  position: relative;
+  left: -50%;
+}
+
+
+/* ========================= */
+/* = Call To Action Button = */
+/* ========================= */
+
+// Shiny buttons make people want to click them! Just add the class callToAction to any link!
+
+// Master Color: change this one value to change all states of the button
+@buttonColor: #c97200;
+
+// slave colors
+@defaultStart: @buttonColor + 35%;
+@defaultEnd: @buttonColor;
+@borderColor: @buttonColor - 50%;
+
+.callToAction{
+  .floatClear;
+  margin: 10px 0 0 0;
+  padding: 4px 13px 2px 13px;
+  
+  font-size: 30px;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  text-shadow: rgba(0,0,0,0.2) -1px 0, rgba(0,0,0,0.2) 0 -1px, rgba(255,255,255,0.2) 0 1px;
+  
+  border: 1px solid @borderColor;
+  
+  .borderRadius(6px);
+  
+  .boxShadow(0px, 0px, 2px, @borderColor);
+  
+  background: ((@defaultStart + @defaultEnd) / 2); // Non CSS3 browsers
+  background: -moz-linear-gradient(top,  @defaultStart, @defaultStart 46%, @defaultEnd 54%, @defaultEnd); // FF 3.6+
+  background: -webkit-gradient(linear, left top, left bottom, from(@defaultStart), color-stop(0.46, @defaultStart), color-stop(0.54, @defaultEnd), to(@defaultEnd)); // Safari 4+, Chrome
+  filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d)", @defaultStart, @defaultEnd); // IE6 & 7
+  -ms-filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d)", @defaultStart, @defaultEnd); // IE8
+}
+
+.callToAction:hover{
+  color: #fff;
+
+  @start: @defaultStart - 20%;
+  @end: @defaultEnd - 20%;
+
+  background: ((@start + @end) / 2); // Non CSS3 browsers
+  background: -moz-linear-gradient(top, @start, @start 46%, @end 54%, @end); // FF 3.6+
+  background: -webkit-gradient(linear, left top, left bottom, from(@start), color-stop(0.46, @start), color-stop(0.54, @end), to(@end)); // Safari 4+, Chrome
+  filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d)", @start, @end); // IE6 & 7
+  -ms-filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d)", @start, @end); // IE8
+}
+
+.callToAction:active{
+  color: #fff;
+
+  @start: @defaultStart - 40%;
+  @end: @defaultEnd - 40%;
+
+  background: ((@start + @end) / 2); // Non CSS3 browsers
+  background: -moz-linear-gradient(top, @start, @start 46%, @end 54%, @end); // FF 3.6+
+  background: -webkit-gradient(linear, left top, left bottom, from(@start), color-stop(0.46, @start), color-stop(0.54, @end), to(@end)); // Safari 4+, Chrome
+  filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d)", @start, @end); // IE6 & 7
+  -ms-filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d)", @start, @end); // IE8
+}
+
+
+/* ================== */
+/* = General Styles = */
+/* ================== */
+
+// No margin or padding on docroot
+html{
+  margin: 0;
+  padding: 0;
+}
+
+// No margin or padding on body, sensible font defaults
+body{
+  margin: 0;
+  padding: 0;
+  font-family: helvetica, arial, verdana, sans-serif;
+  text-rendering: optimizeLegibility; // enable better kerning and ligatures for Webkit. FF has this enabled by default for fonts >= 20px. IE does not support this
+}
+
+// Stack your boxes easily with this
+.floatClear{
+  float: left;
+  clear: both;
+}
+
+// Do you hate borders on your images and image links? Because I do.
+img{border: 0;}
+
+// Wow! You also don't like bullets? Great to meet you.
+ul{list-style-type: none;}
