@@ -14,103 +14,112 @@
         <h1>Less Boilerplate</h1>
       </div>
     </div>
-    <div class="wrapOut">
+    <div id="content" class="wrapOut">
       <div class="wrapIn">
-        <div class="info">
-          <h2>What's This?</h2>
+        <div class="section">
+          <h2>Contents</h2>
+          <div id="naviation"><a href="#what">What's This?</a> | <a href="#stuff">What Does it Give Me?</a> | <a href="#docs">Documentation / Examples</a> | <a href="#usage">Usage<a> | <a href="#download">Download</a> | <a href="#who">And Who Made This?</a></div>
+        </div>
+        <div class="section">
+          <h2><a name="what">What's This?</a></h2>
           I went through my recent design projects and pulled out the styles that I use all the time into an easy-to-import stylesheet. They help me get a new design started, and I hope they help you too!
           <br>
           <br>It's written in <a href="http://www.lesscss.org">Less</a>, the dynamic stylesheet language.
         </div>
-        <div class="contents">
-          <h2>What Does it Give Me?</h2>
+        <div id="contents" class="section">
+          <h2><a name="stuff">What Does it Give Me?</a></h2>
           <ul>
             <li>CSS Reset</li>
             <li>CSS3 Helpers (box shadow, gradients, box radius)</li>
             <li>Centered column blocks</li>
             <li>Horizontal centering for objects of variable width</li>
             <li>A fancy call to action button</li>
-            <li>A few general styles</li>
+            <li>A few general styles and sensible defaults</li>
           </ul>
         </div>
-      </div>
-    </div>
-    <div class="wrapOut">
-      <div class="wrapIn">
-        <h2>Documentation / Examples</h2>
-        <br>
-        <div class="description">
-          <b>CSS3 Helpers</b>
-        </div>
-        <div class="description">
-          Rounded Corners
-          <pre><span style="color: #8ccbfe;">#element</span>{.boxRadius(radius);}</pre>
-        </div>
-        <div class="example">
-          <div id="rounded">
-            .borderRadius(15px);
-            <br>
-            <br><i>compiles to</i>
-            <br>
-            <br>border-radius: 15px;
-            <br>-moz-border-radius: 15px;
-            <br>-webkit-border-radius: 15px;
+        <div class="section">
+          <h2><a name="docs">Documentation / Examples</a></h2>
+          <br>
+          <div class="description">
+            <b>CSS3 Helpers</b>
           </div>
-        </div>
-        <div class="description">
-          Gradients
-          <pre><span style="color: #7c7c7c;">// Vertical</span>
+          <div class="description">
+            Rounded Corners
+            <pre><span style="color: #8ccbfe;">#element</span>{.boxRadius(radius);}</pre>
+          </div>
+          <div class="example">
+            <div id="rounded">
+              .borderRadius(15px);
+              <br>
+              <br><i>compiles to</i>
+              <br>
+              <br>border-radius: 15px;
+              <br>-moz-border-radius: 15px;
+              <br>-webkit-border-radius: 15px;
+            </div>
+          </div>
+          <div class="description">
+            Gradients
+            <pre><span style="color: #7c7c7c;">// Vertical</span>
 <span style="color: #8ccbfe;">#element</span>{.gradientV(startColor, endColor);}
 
 <span style="color: #7c7c7c;">// Horizontal</span>
 <span style="color: #8ccbfe;">#element</span>{.gradientH(startColor, endColor);}</pre>
-        </div>
-        <div class="example">
-          <div id="gradient1">
-            .gradientV(@lavender, @red);
-            <br>
-            <br><i>compiles to</i>
-            <br>
-            <br>background: #e3a6d8;
-            <br>background: -moz-linear-gradient(top, #e3a6d8, #ff6464);
-            <br>background: -webkit-gradient(linear, left top, left bottom, from(#e3a6d8), to(#ff6464));
-            <br>filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e3a6d8, endColorstr=#ff6464);
-            <br>-ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e3a6d8, endColorstr=#ff6464);
           </div>
-          <div id="gradient2">
-            .gradientH(@lavender, @red);
-            <br>
-            <br><i>compiles to</i>
-            <br>
-            <br>background: #e3a6d8;
-            <br>background: -moz-linear-gradient(left, #e3a6d8, #ff6464);
-            <br>background: -webkit-gradient(linear, left center, right center, from(#e3a6d8), to(#ff6464));
-            <br>filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e3a6d8, endColorstr=#ff6464, GradientType=1);
-            <br>-ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e3a6d8, endColorstr=#ff6464, GradientType=1);
+          <div class="example">
+            <div id="gradient1">
+              .gradientV(@lavender, @red);
+              <br>
+              <br><i>compiles to</i>
+              <br>
+              <br>background: #ff859e;
+              <br>background-image: -moz-linear-gradient(top, #e3a6d8, #ff6464);
+              <br>background-image: -webkit-gradient(linear, left top, left bottom, from(#e3a6d8), to(#ff6464));
+              <br>background-image: -webkit-linear-gradient(top, #e3a6d8, #ff6464);
+              <br>background-image: -o-linear-gradient(top, #e3a6d8, #ff6464);
+              <br>background-image: linear-gradient(top, #e3a6d8, #ff6464);
+              <br>filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e3a6d8, endColorstr=#ff6464);
+              <br>-ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e3a6d8, endColorstr=#ff6464);
+              <br>background-image: -ms-linear-gradient(top, #ff6464, #ff6464);
+            </div>
+            <div id="gradient2">
+              .gradientH(@lavender, @red);
+              <br>
+              <br><i>compiles to</i>
+              <br>
+              <br>background: #ff859e;
+              <br>background-image: -moz-linear-gradient(left, #e3a6d8, #ff6464);
+              <br>background-image: -webkit-gradient(linear, left center, right center, from(#e3a6d8), to(#ff6464));
+              <br>background-image: -webkit-linear-gradient(left center, right center, from(#e3a6d8), to(#ff6464));
+              <br>background-image: -o-linear-gradient(left, #e3a6d8, #ff6464);
+              <br>background-image: linear-gradient(left, #e3a6d8, #ff6464);
+              <br>filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e3a6d8, endColorstr=#ff6464, GradientType=1);
+              <br>-ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e3a6d8, endColorstr=#ff6464, GradientType=1);
+              <br>background-image: -ms-linear-gradient(left, #ff6464, #ff6464);
+            </div>
           </div>
-        </div>
-        <div class="description">
-          Drop Shadow
-          <pre><span style="color: #8ccbfe;">#element</span>{.boxShadow(xOffset, yOffset, blur, color);}</pre>
-        </div>
-        <div class="example">
-          <div id="shadow">
-            .boxShadow(3px, 3px, 6px, #000);
-            <br>
-            <br><i>compiles to</i>
-            <br>
-            <br>-moz-box-shadow: 3px 3px 6px #000000;
-            <br>-webkit-box-shadow: 3px 3px 6px #000000;
-            <br>box-shadow: 3px 3px 6px #000000;
+          <div class="description">
+            Drop Shadow
+            <pre><span style="color: #8ccbfe;">#element</span>{.boxShadow(xOffset, yOffset, blur, color);}</pre>
           </div>
-        </div>
-        <div class="description example">
-          <b>Stacking &amp; Centering</b>
-          <br>
-          <br>For designs that involve a centered column of fixed with, I've found that for that for great browser compatability, it's useful to separate page elements into discreet horizontal chunks when possible. The classes wrapOut and wrapIn help handle this.
-          <br>
-          <br>Each section on this page uses these two styles.
-        <pre><span style="color: #8ccbfe;">&lt;div</span> <span style="color: #ffd7b1;">class=</span><span style="color: #99e957;">"wrapOut"</span><span style="color: #8ccbfe;">&gt;</span>
+          <div class="example">
+            <div id="shadow">
+              .boxShadow(3px, 3px, 6px, #000);
+              <br>
+              <br><i>compiles to</i>
+              <br>
+              <br>-moz-box-shadow: 3px 3px 6px #000000;
+              <br>-webkit-box-shadow: 3px 3px 6px #000000;
+              <br>box-shadow: 3px 3px 6px #000000;
+            </div>
+          </div>
+          <div class="description example">
+            <b>Stacking &amp; Centering</b>
+            <br>
+            <br>For designs that involve a centered column of fixed with, I've found that for that for great browser compatability, it's useful to separate page elements into discreet horizontal chunks when possible. The classes wrapOut and wrapIn help handle this.
+            <br>
+            <br>Each section on this page uses these two styles.
+          <pre><span style="color: #8ccbfe;">&lt;div</span> <span style="color: #ffd7b1;">class=</span><span style="color: #99e957;">"wrapOut"</span><span style="color: #8ccbfe;">&gt;</span>
   <span style="color: #8ccbfe;">&lt;div</span> <span style="color: #ffd7b1;">class=</span><span style="color: #99e957;">"wrapIn"</span><span style="color: #8ccbfe;">&gt;</span>
     Content goes here, is centered, and stacks nicely.
   <span style="color: #8ccbfe;">&lt;/div&gt;</span>
@@ -120,72 +129,66 @@
     Same here.
   <span style="color: #8ccbfe;">&lt;/div&gt;</span>
 <span style="color: #8ccbfe;">&lt;/div&gt;</span></pre>
-        </div>
-        <div class="description">
-          <b>General Helpers</b>
-        </div>
-        <div class="description">
-          Horizontal Centering for Objects of Variable Width
-          <pre><span style="color: #8ccbfe;">&lt;div</span> <span style="color: #ffd7b1;">class=</span><span style="color: #99e957;">"outer"</span><span style="color: #8ccbfe;">&gt;</span>
+          </div>
+          <div class="description">
+            <b>General Helpers</b>
+          </div>
+          <div class="description">
+            Horizontal Centering for Objects of Variable Width
+            <pre><span style="color: #8ccbfe;">&lt;div</span> <span style="color: #ffd7b1;">class=</span><span style="color: #99e957;">"outer"</span><span style="color: #8ccbfe;">&gt;</span>
   <span style="color: #8ccbfe;">&lt;div</span> <span style="color: #ffd7b1;">class=</span><span style="color: #99e957;">"inner"</span><span style="color: #8ccbfe;">&gt;</span>
     The contents can change dynamically and still be centered.
   <span style="color: #8ccbfe;">&lt;/div&gt;</span>
 <span style="color: #8ccbfe;">&lt;/div&gt;</span></pre>
-        </div>
-        <div class="example">
-          <div class="outer">
-            <div id="centeredContent" class="inner">
-              This is variable width, but always centered. <a href="#">Hover here to try it!<span>&nbsp;&nbsp;&nbsp;&nbsp;See? Still centered.</span></a>
+          </div>
+          <div class="example">
+            <div class="outer">
+              <div id="centeredContent" class="inner">
+                This is variable width, but always centered. <a href="#">Hover here to try it!<span>&nbsp;&nbsp;&nbsp;&nbsp;See? Still centered.</span></a>
+              </div>
             </div>
           </div>
+          <div class="description">
+            Call to Action Button
+            <pre><span style="color: #8ccbfe;">&lt;a</span> <span style="color: #ffd7b1;">href=</span><span style="color: #99e957;">"#"</span> <span style="color: #ffd7b1;">class=</span><span style="color: #99e957;">"callToAction"</span><span style="color: #8ccbfe;">&gt;</span>button text<span style="color: #8ccbfe;">&lt;/a&gt;</span></pre>
+          </div>
+          <div class="example">
+            <a href="#" class="callToAction">click me</a>
+          </div>
+          <div class="description">
+            Float Left and Clear Both
+            <pre><span style="color: #8ccbfe;">#element</span>{.floatClear;}</pre>
+          </div>
+          <div id="lastExample" class="example">
+            <div class="floatClearExample">.floatClear;</div>
+            <div class="floatClearExample">.floatClear;</div>
+          </div>
         </div>
-        <div class="description">
-          Call to Action Button
-          <pre><span style="color: #8ccbfe;">&lt;a</span> <span style="color: #ffd7b1;">href=</span><span style="color: #99e957;">"#"</span> <span style="color: #ffd7b1;">class=</span><span style="color: #99e957;">"callToAction"</span><span style="color: #8ccbfe;">&gt;</span>button text<span style="color: #8ccbfe;">&lt;/a&gt;</span></pre>
+        <div class="section">
+          <h2><a name="usage">Usage</a></h2>
+          <p>
+            Import the Less Boilerplate stylesheet at the top of your main stylesheet:
+            <pre><span style="color: #8ccbfe;">@import</span> 'boilerplate';</pre>
+          </p>
         </div>
-        <div class="example">
-          <a href="#" class="callToAction">click me</a>
+        <div class="section">
+          <h2><a name="download">Download</a></h2>
+          <p>
+            Download Less Boilerplate in <a href="http://github.com/mgeraci/Less-Boilerplate/zipball/master">zip</a> or <a href="http://github.com/mgeraci/Less-Boilerplate/tarball/master">tar</a> formats. Or clone the git repo by running:
+            <pre>git clone git://github.com/mgeraci/Less-Boilerplate</pre>
+          </p>
         </div>
-        <div class="description">
-          Float Left and Clear Both
-          <pre><span style="color: #8ccbfe;">#element</span>{.floatClear;}</pre>
-        </div>
-        <div id="lastExample" class="example">
-          <div class="floatClearExample">.floatClear;</div>
-          <div class="floatClearExample">.floatClear;</div>
-        </div>
-      </div>
-    </div>
-    <div class="wrapOut">
-      <div class="wrapIn">
-        <h2>Usage</h2>
-        <p>
-          Import the Less Boilerplate stylesheet at the top of your main stylesheet:
-          <pre><span style="color: #8ccbfe;">@import</span> 'boilerplate';</pre>
-        </p>
-      </div>
-    </div>
-    <div class="wrapOut">
-      <div class="wrapIn">
-        <h2>Download</h2>
-        <p>
-          Download Less Boilerplate in <a href="http://github.com/mgeraci/Less-Boilerplate/zipball/master">zip</a> or <a href="http://github.com/mgeraci/Less-Boilerplate/tarball/master">tar</a> formats. Or clone the git repo by running:
-          <pre>git clone git://github.com/mgeraci/Less-Boilerplate</pre>
-        </p>
-      </div>
-    </div>
-    <div class="wrapOut">
-      <div class="wrapIn">
-        <h2>And Who Made This?</h2>
-        <p>
-          I'm Michael P. Geraci, a New York-based web designer and U/X guy.
+        <div id="lastSection" class="section">
+          <h2><a name="who">And Who Made This?</a></h2>
+          <p>
+            I'm Michael P. Geraci, a New York-based web designer and U/X guy.
+            <br>
+            <br><a href="mailto:mgeraci@gmail.com">email</a> | <a href="http://www.michaelgeraci.com">portfolio</a> | <a href="http://github.com/mgeraci/Less-Boilerplate">source</a>
+          </p>
           <br>
-          <br><a href="http://github.com/mgeraci/Less-Boilerplate">source</a> | <a href="mailto:mgeraci@gmail.com">email</a> | <a href="http://www.michaelgeraci.com">portfolio</a>
-        </p>
-        <br>
-        <br>
-        <br>
-        <br>&copy; 2011
+          <br>
+          <br>&copy; 2011
+        </div>
       </div>
     </div>
   </body>
