@@ -5,7 +5,7 @@ I decided to go through my recent projects and pull out the most commonly used s
 
 Written in [Less.CSS](http://lesscss.org/), the dynamic stylesheet language.
 
-Check out the [demo](http://mgeraci.github.com/Less-Boilerplate/)
+Check out the [demo](http://mgeraci.github.com/Less-Boilerplate/).
 
 Contents:
 ---------
