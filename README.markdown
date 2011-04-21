@@ -14,7 +14,7 @@ Contents:
 - Centered column blocks
 - Horizontal centering for objects of variable width
 - A fancy call to action button
-- A few general styles and sensible defaults
+- A few general styles and sensible defaults (including a clearfix)
 
 Usage:
 --------
