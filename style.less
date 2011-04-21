@@ -9,20 +9,66 @@
 @red: #f00 + 100%;
 @gray: #ccc;
 
+
+/* ================== */
+/* = General Styles = */
+/* ================== */
+
 // bg color
-body{background: @blue;}
+body{
+  background: @blue;
+  color: #04232B;
+  font-size: 18px;
+}
 
 // general link color
 a{color: #000;}
-a:hover{color: @blue - 50%;}
+a:hover{
+  color: @buttonColor + 50%;
+  text-shadow: 0 -1px rgba(0,0,0,0.3);
+}
+
+// section titles
+h2{
+  font-size: 30px;
+  color: @buttonColor + 50%;
+  font-weight: bold;
+  text-shadow: 0 -1px rgba(0,0,0,0.3), 0 1px rgba(255,255,255,0.1);
+  padding: 0 0 10px 0;
+}
+
+// style for the notes
+.note{
+  color: @gray;
+  text-shadow: 0 -1px rgba(0,0,0,0.2);
+}
+
+// give some padding to the content sections
+.wrapOut{padding: 30px 0;}
+
+// code
+pre{
+  background: #000;
+  color: #fff;
+  padding: 15px;
+  margin: 10px 0 0 0;
+  font-family: monaco;
+}
+
+
+/* ========== */
+/* = Header = */
+/* ========== */
 
 #header{
   background: desaturate(@blue, 10%) - 54%;
-  padding: 20px 0;
+  padding: 15px 0;
+  margin: 0 0 30px 0;
   color: @gray;
   letter-spacing: 0.1em;
   font-style: oblique;
   float: left;
+  .boxShadow(0, 3px, 7px, #355761 - 30%);
 }
 
 // used in header
@@ -30,65 +76,87 @@ h1{
   display: inline;
   font-weight: bold;
   font-style: normal;
-  color: #eee;
+  color: @buttonColor + 50%;
   letter-spacing: 0.1em;
-  font-size: 30px;
+  font-size: 35px;
   text-shadow: 0px -1px rgba(0,0,0,0.5);
   float: left;
   margin: 0 20px 0 0;
 }
 
-// style for the notes
-.note{
-  color: #eee;
-  font-size: 20px;
-  text-shadow: 0 -1px rgba(0,0,0,0.3);
+
+/* ======== */
+/* = Body = */
+/* ======== */
+
+// description and contents
+.info, .contents{
+  margin: 50px 0;
+  
+  ul{
+    list-style-type: disc;
+    margin: 0 0 0 25px;
+  }
 }
 
-// give some padding to the content sections
-.wrapOut{padding: 50px 0;}
+.info{margin-top: 0;}
+.contents{margin-bottom: 0;}
 
-// stacked box style
+// exmaple box style
 .box{
   .floatClear;
   padding: 15px;
-  width: 250px;
+  width: 290px;
   margin: 0 0 20px 0;
+  border: 1px solid @lavender - 50%;
+  background: @lavender;
 }
 
+// example descriptions
+.description{
+  width: @bodyWidth;
+  .floatClear;
+  margin: 0 0 30px 0;
+}
+
+// example contents
+.example{
+  width: @bodyWidth;
+  .floatClear;
+  margin: 0 0 50px 0;
+}
+
+.floatClearExample{.box;}
+
 // round and shadow
-#box1{
+#rounded{
   .box;
-  background: @lavender;
   .borderRadius(15px);
+}
+
+#shadow{
   .boxShadow(2px, 2px, 10px, #000);
 }
 
 // vertical gradient
 #gradient1{
   .box;
+  width: 830px;
+  margin: 0 30px 20px 0;
   .gradientV(@lavender, @red);
 }
 
 // horizontal gradient
 #gradient2{
   .box;
+  width: 830px;
   .gradientH(@lavender, @red);
 }
 
-// holds the boxes
-#left{
-  float: left;
-  width: @bodyWidth * 0.35 - 20;
-  margin: 0 20px 0 0;
-}
-
-// holds the note about boxes
-#right{
-  float: left;
-  width: @bodyWidth * 0.6;
-  .note;
-  padding: 170px 0 0 0;
+#shadow{
+  .box;
+  width: 360px;
+  .boxShadow(3px, 3px, 6px, #000);
 }
 
 // centering variable width
@@ -100,25 +168,15 @@ h1{
   a span{
     display: none;
   }
-
+  
+  a:hover{
+    color: @blue - 80%;
+    text-shadow: none;
+  }
+  
   a:hover > span{
     display: inline;
   }
 }
 
-#callContainer{
-  .note;
-  
-  a{text-shadow: 0 0;}
-}
-
-// github styles
-h1 .small { font-size: 0.4em; }
-h1 a { text-decoration: none }
-h2 { font-size: 1.5em; color: #c7a749; }
-h3 { text-align: center; color: #c7a749; }
-.description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px;}
-.download { float: right; }
-pre { background: #000; color: #fff; padding: 15px;}
-hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-.footer { text-align:center; padding-top:30px; font-style: italic; }
+#lastContainer{margin-bottom: 0;}

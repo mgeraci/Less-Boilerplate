@@ -1,0 +1,150 @@
+/* ====================================================== */
+/* =           Boilerplate Less CSS Styles              = */
+/* = by Michael P. Geraci, 2011 - www.michaelgeraci.com = */
+/* =           mgeraci@gmail.com | @mgeraci             = */
+/* =          free for all to use and modify            = */
+/* ====================================================== */
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+code,
+del,
+dfn,
+em,
+img,
+q,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+hr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+}
+/* ================ */
+/* = CSS3 Helpers = */
+/* ================ */
+/* =========================== */
+/* = Centered Content Blocks = */
+/* =========================== */
+.wrapOut {
+  width: 100%;
+  float: left;
+  clear: both;
+  min-width: 960px;
+}
+.wrapIn {
+  width: 960px;
+  margin: 0 auto;
+}
+/* ====================================================== */
+/* = Horizontal Centering for Objects of Variable Width = */
+/* ====================================================== */
+.outer {
+  float: left;
+  clear: both;
+  position: relative;
+  left: 50%;
+}
+.inner {
+  position: relative;
+  left: -50%;
+}
+/* ========================= */
+/* = Call To Action Button = */
+/* ========================= */
+.callToAction {
+  float: left;
+  clear: both;
+  margin: 10px 0 0 0;
+  padding: 4px 13px 2px 13px;
+  font-size: 30px;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  text-shadow: rgba(0, 0, 0, 0.2) -1px 0, rgba(0, 0, 0, 0.2) 0 -1px, rgba(255, 255, 255, 0.2) 0 1px;
+  border: 1px solid #974000;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-box-shadow: 0px 0px 2px #974000;
+  -webkit-box-shadow: 0px 0px 2px #974000;
+  box-shadow: 0px 0px 2px #974000;
+  background: #db8412;
+  background: -moz-linear-gradient(top, #ec9523, #ec9523 46%, #c97200 54%, #c97200);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ec9523), color-stop(0.46, #ec9523), color-stop(0.54, #c97200), to(#c97200));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ec9523, endColorstr=#c97200);
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ec9523, endColorstr=#c97200);
+}
+.callToAction:hover {
+  color: #fff;
+  background: #c77000;
+  background: -moz-linear-gradient(top, #d8810f, #d8810f 46%, #b55e00 54%, #b55e00);
+  background: -webkit-gradient(linear, left top, left bottom, from(#d8810f), color-stop(0.46, #d8810f), color-stop(0.54, #b55e00), to(#b55e00));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#d8810f, endColorstr=#b55e00);
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#d8810f, endColorstr=#b55e00);
+}
+.callToAction:active {
+  color: #fff;
+  background: #b35c00;
+  background: -moz-linear-gradient(top, #c46d00, #c46d00 46%, #a14a00 54%, #a14a00);
+  background: -webkit-gradient(linear, left top, left bottom, from(#c46d00), color-stop(0.46, #c46d00), color-stop(0.54, #a14a00), to(#a14a00));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#c46d00, endColorstr=#a14a00);
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#c46d00, endColorstr=#a14a00);
+}
+/* ================== */
+/* = General Styles = */
+/* ================== */
+html {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: helvetica, arial, verdana, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+.floatClear {
+  float: left;
+  clear: both;
+}
+img {
+  border: 0;
+}
+ul {
+  list-style-type: none;
+}
