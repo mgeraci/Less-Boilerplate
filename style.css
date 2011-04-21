@@ -1,11 +1,17 @@
-/* ====================================================== */
-/* =           Boilerplate Less CSS Styles              = */
-/* = by Michael P. Geraci, 2011 - www.michaelgeraci.com = */
-/* =           mgeraci@gmail.com | @mgeraci             = */
-/* =          free for all to use and modify            = */
-/* ====================================================== */
+/* ========================================================= */
+/* =             Boilerplate Less CSS Styles               = */
+/* =  by Michael P. Geraci, 2011 - www.michaelgeraci.com   = */
+/* =  tell me what's missing: mgeraci@gmail.com | @mgeraci = */
+/* =           free for all to use and modify              = */
+/* ========================================================= */
+/* ============= */
+/* = CSS Reset = */
+/* ============= */
+html,
+body,
 div,
 span,
+applet,
 object,
 iframe,
 h1,
@@ -21,18 +27,39 @@ a,
 abbr,
 acronym,
 address,
+big,
+cite,
 code,
 del,
 dfn,
 em,
 img,
+ins,
+kbd,
 q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
 dl,
 dt,
 dd,
 ol,
 ul,
 li,
+fieldset,
+form,
+label,
+legend,
 table,
 caption,
 tbody,
@@ -41,7 +68,26 @@ thead,
 tr,
 th,
 td,
-hr {
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -52,6 +98,19 @@ hr {
   font-style: inherit;
   font-size: 100%;
   font-family: inherit;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 /* ================ */
 /* = CSS3 Helpers = */
@@ -148,6 +207,16 @@ img {
 ul {
   list-style-type: none;
 }
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  display: block;
+}
 /* ================== */
 /* = General Styles = */
 /* ================== */
@@ -213,17 +282,22 @@ h1 {
   display: inline;
   font-weight: bold;
   font-style: normal;
-  color: #93B1C4;
+  color: #bbd9ec;
   letter-spacing: 0.1em;
   font-size: 35px;
   text-shadow: 0px -1px rgba(0, 0, 0, 0.7), 0px 1px rgba(255, 255, 255, 0.2);
   float: left;
   margin: 0 20px 0 0;
 }
+h1 span {
+  color: #e7901e;
+  position: relative;
+  bottom: 3px;
+}
 /* ======== */
 /* = Body = */
 /* ======== */
-#contents ul {
+#what ul {
   list-style-type: disc;
   margin: 0 0 0 25px;
 }
@@ -340,6 +414,23 @@ h1 {
 }
 #centeredContent a:hover > span {
   display: inline;
+}
+.clearfixContainer {
+  float: left;
+  margin: 0 20px 0 0;
+}
+.clearfixOuter {
+  width: 350px;
+  padding: 15px;
+  background: #e3a6d8;
+  border: 1px solid #b174a6;
+}
+.clearfixInner {
+  float: right;
+  width: 50%;
+  padding: 15px;
+  background: #ff6464;
+  border: 1px solid #ff3232;
 }
 #lastExample {
   margin-bottom: 0;

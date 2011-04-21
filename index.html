@@ -11,31 +11,27 @@
     <a href="http://github.com/mgeraci/Less-Boilerplate"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
     <div id="header" class="wrapOut">
       <div class="wrapIn">
-        <h1>Less Boilerplate</h1>
+        <h1><span>{}</span> Less Boilerplate</h1>
       </div>
     </div>
     <div id="content" class="wrapOut">
       <div class="wrapIn">
         <div class="section">
-          <h2>Contents</h2>
-          <div id="naviation"><a href="#what">What's This?</a> | <a href="#stuff">What Does it Give Me?</a> | <a href="#docs">Documentation / Examples</a> | <a href="#usage">Usage<a> | <a href="#download">Download</a> | <a href="#who">And Who Made This?</a></div>
+          <div id="naviation"><a href="#what">What</a> | <a href="#docs">Documentation / Examples</a> | <a href="#usage">Usage<a> | <a href="#download">Download</a> | <a href="#who">Who</a></div>
         </div>
-        <div class="section">
-          <h2><a name="what">What's This?</a></h2>
-          I went through my recent design projects and pulled out the styles that I use all the time into an easy-to-import stylesheet. They help me get a new design started, and I hope they help you too!
-          <br>
-          <br>It's written in <a href="http://www.lesscss.org">Less</a>, the dynamic stylesheet language.
-        </div>
-        <div id="contents" class="section">
-          <h2><a name="stuff">What Does it Give Me?</a></h2>
-          <ul>
+        <div id="what" class="section">
+          <h2><a name="what">What</a></h2>
+          Boilerplate CSS written in <a href="http://www.lesscss.org">Less</a>, the dynamic stylesheet language. It includes:
+          <br><br><ul>
             <li>CSS Reset</li>
             <li>CSS3 Helpers (box shadow, gradients, box radius)</li>
             <li>Centered column blocks</li>
             <li>Horizontal centering for objects of variable width</li>
             <li>A fancy call to action button</li>
-            <li>A few general styles and sensible defaults</li>
+            <li>A few general styles and sensible defaults (including a clearfix)</li>
           </ul>
+          <br>
+          I went through my recent design projects and pulled out these styles that I use all the time to create an easy-to-import stylesheet. They help me get a new design started, and I hope they help you too!
         </div>
         <div class="section">
           <h2><a name="docs">Documentation / Examples</a></h2>
@@ -116,9 +112,9 @@
           <div class="description example">
             <b>Stacking &amp; Centering</b>
             <br>
-            <br>For designs that involve a centered column of fixed with, I've found that for that for great browser compatability, it's useful to separate page elements into discreet horizontal chunks when possible. The classes wrapOut and wrapIn help handle this.
+            <br>For designs that involve a centered column of fixed with, I've found that for that for great browser compatability, it's useful to separate page elements into discreet horizontal chunks when possible. The classes wrapOut and wrapIn help.
             <br>
-            <br>Each section on this page uses these two styles.
+            <br>The header and body sections of this page use these two classes.
           <pre><span style="color: #8ccbfe;">&lt;div</span> <span style="color: #ffd7b1;">class=</span><span style="color: #99e957;">"wrapOut"</span><span style="color: #8ccbfe;">&gt;</span>
   <span style="color: #8ccbfe;">&lt;div</span> <span style="color: #ffd7b1;">class=</span><span style="color: #99e957;">"wrapIn"</span><span style="color: #8ccbfe;">&gt;</span>
     Content goes here, is centered, and stacks nicely.
@@ -159,15 +155,51 @@
             Float Left and Clear Both
             <pre><span style="color: #8ccbfe;">#element</span>{.floatClear;}</pre>
           </div>
+          <div class="example">
+            <div class="floatClearExample">.floatClear;</div>
+            <div class="floatClearExample">.floatClear;</div>
+          </div>
+          <div class="description">
+            Clearfix
+            <pre><span style="color: #8ccbfe;">&lt;div</span> <span style="color: #ffd7b1;">style=</span><span style="color: #99e957;">"width: 350px;"</span> <span style="color: #ffd7b1;">class=</span><span style="color: #99e957;">"clearfix"</span><span style="color: #8ccbfe;">&gt;</span>
+  parent's content
+  <span style="color: #8ccbfe;">&lt;div</span> <span style="color: #ffd7b1;">style=</span><span style="color: #99e957;">"float: left; width: 50%;"</span><span style="color: #8ccbfe;">&gt;</span>
+    If the child's content extends beyond the parent's,
+    adding the class "clearfix" will make the parent expand.
+  <span style="color: #8ccbfe;">&lt;/div&gt;</span>
+<span style="color: #8ccbfe;">&lt;/div&gt;</span></pre>
+          </div>
           <div id="lastExample" class="example">
-            <div class="floatClearExample">.floatClear;</div>
-            <div class="floatClearExample">.floatClear;</div>
+            <div class="clearfixContainer">
+              <div class="clearfixOuter">
+                <div class="clearfixInner">
+                  set width,
+                  <br>float: right;
+                  <br>
+                  <br><i>content extends beyond the parent</i>
+                </div>
+                set width,
+                <br>no float
+              </div>
+            </div>
+            <div class="clearfixContainer">
+              <div class="clearfixOuter clearfix">
+                <div class="clearfixInner">
+                  set width,
+                  <br>float: right;
+                  <br>
+                  <br><i>parent expands to accomodate the child's content</i>
+                </div>
+                set width,
+                <br>added class "clearfix"
+              </div>
+            </div>
           </div>
         </div>
         <div class="section">
           <h2><a name="usage">Usage</a></h2>
           <p>
-            Import the Less Boilerplate stylesheet at the top of your main stylesheet:
+            Import the Less Boilerplate stylesheet at the top of your main Less stylesheet:
             <pre><span style="color: #8ccbfe;">@import</span> 'boilerplate';</pre>
           </p>
         </div>
@@ -179,7 +211,7 @@
           </p>
         </div>
         <div id="lastSection" class="section">
-          <h2><a name="who">And Who Made This?</a></h2>
+          <h2><a name="who">Who</a></h2>
           <p>
             I'm Michael P. Geraci, a New York-based web designer and U/X guy.
             <br>

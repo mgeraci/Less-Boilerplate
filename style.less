@@ -87,12 +87,18 @@ h1{
   display: inline;
   font-weight: bold;
   font-style: normal;
-  color: #93B1C4;
+  color: #93B1C4 + 40%;
   letter-spacing: 0.1em;
   font-size: 35px;
   text-shadow: 0px -1px rgba(0,0,0,0.7), 0px 1px rgba(255,255,255,0.2);
   float: left;
   margin: 0 20px 0 0;
+  
+  span{
+    color: @buttonColor + 30%;
+    position: relative;
+    bottom: 3px;
+  }
 }
 
 
@@ -101,7 +107,7 @@ h1{
 /* ======== */
 
 // description and contents
-#contents{
+#what{
   ul{
     list-style-type: disc;
     margin: 0 0 0 25px;
@@ -183,6 +189,27 @@ h1{
   a:hover > span{
     display: inline;
   }
+}
+
+// holds each cleafix example
+.clearfixContainer{
+  float: left;
+  margin: 0 20px 0 0;
+}
+
+.clearfixOuter{
+  width: 350px;
+  padding: 15px;
+  background: @lavender;
+  border: 1px solid @lavender - 50%;
+}
+
+.clearfixInner{
+  float: right;
+  width: 50%;
+  padding: 15px;
+  background: @red;
+  border: 1px solid @red - 50%;
 }
 
 #lastExample{margin-bottom: 0;}

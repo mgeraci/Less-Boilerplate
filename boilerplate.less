@@ -1,13 +1,16 @@
-/* ====================================================== */
-/* =           Boilerplate Less CSS Styles              = */
-/* = by Michael P. Geraci, 2011 - www.michaelgeraci.com = */
-/* =           mgeraci@gmail.com | @mgeraci             = */
-/* =          free for all to use and modify            = */
-/* ====================================================== */
+/* ========================================================= */
+/* =             Boilerplate Less CSS Styles               = */
+/* =  by Michael P. Geraci, 2011 - www.michaelgeraci.com   = */
+/* =  tell me what's missing: mgeraci@gmail.com | @mgeraci = */
+/* =           free for all to use and modify              = */
+/* ========================================================= */
 
 
-// CSS Reset
-div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, table, caption, tbody, tfoot, thead, tr, th, td, hr{
+/* ============= */
+/* = CSS Reset = */
+/* ============= */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{
   margin: 0;
   padding: 0;
   border: 0;
@@ -20,6 +23,10 @@ div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, 
   font-family: inherit;
 }
 
+// HTML5 display-role reset for older browsers
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{
+  display: block;
+}
 
 /* ================ */
 /* = CSS3 Helpers = */
@@ -70,10 +77,9 @@ div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, 
 /* = Centered Content Blocks = */
 /* =========================== */
 
-// For designs that involve a centered column of fixed with, I've that
+// For designs that involve a centered column of fixed with, I've found that
 // for great browser compatability, it's useful to separate page elements
-// into discreet horizontal chunks when possible. These two styles help
-// handle this.
+// into discreet horizontal chunks when possible. These two classes help.
 //
 // example:
 // <div class="wrapOut">
@@ -84,11 +90,6 @@ div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, 
 // <div class="wrapOut">
 //   <div class="wrapIn">
 //     your main content goes here
-//   </div>
-// </div>
-// <div class="wrapOut">
-//   <div id="footer" class="wrapIn">
-//     your footer goes here
 //   </div>
 // </div>
 
@@ -223,3 +224,14 @@ img{border: 0;}
 
 // Wow! You also don't like bullets? Great to meet you.
 ul{list-style-type: none;}
+
+// clearfix
+.clearfix:after{
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.clearfix{display: block;}

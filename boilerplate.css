@@ -1,11 +1,17 @@
-/* ====================================================== */
-/* =           Boilerplate Less CSS Styles              = */
-/* = by Michael P. Geraci, 2011 - www.michaelgeraci.com = */
-/* =           mgeraci@gmail.com | @mgeraci             = */
-/* =          free for all to use and modify            = */
-/* ====================================================== */
+/* ========================================================= */
+/* =             Boilerplate Less CSS Styles               = */
+/* =  by Michael P. Geraci, 2011 - www.michaelgeraci.com   = */
+/* =  tell me what's missing: mgeraci@gmail.com | @mgeraci = */
+/* =           free for all to use and modify              = */
+/* ========================================================= */
+/* ============= */
+/* = CSS Reset = */
+/* ============= */
+html,
+body,
 div,
 span,
+applet,
 object,
 iframe,
 h1,
@@ -21,18 +27,39 @@ a,
 abbr,
 acronym,
 address,
+big,
+cite,
 code,
 del,
 dfn,
 em,
 img,
+ins,
+kbd,
 q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
 dl,
 dt,
 dd,
 ol,
 ul,
 li,
+fieldset,
+form,
+label,
+legend,
 table,
 caption,
 tbody,
@@ -41,7 +68,26 @@ thead,
 tr,
 th,
 td,
-hr {
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -52,6 +98,19 @@ hr {
   font-style: inherit;
   font-size: 100%;
   font-family: inherit;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 /* ================ */
 /* = CSS3 Helpers = */
@@ -147,4 +206,14 @@ img {
 }
 ul {
   list-style-type: none;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  display: block;
 }
