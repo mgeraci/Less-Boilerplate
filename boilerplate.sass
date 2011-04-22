@@ -1,0 +1,246 @@
+// =========================================================
+// =             Boilerplate Sass CSS Styles               =
+// =        by Nathan Henderson, 2011 - nathos.com         =
+// =                                                       =
+// =        based on 'Boilerplate Less CSS Styles'         =
+// =  by Michael P. Geraci, 2011 - www.michaelgeraci.com   =
+// =========================================================
+
+
+// =============
+// = CSS Reset =
+// =============
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, tt, var, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  outline: 0
+  vertical-align: baseline
+  background: transparent
+  font-weight: inherit
+  font-style: inherit
+  font-size: 100%
+  font-family: inherit
+
+// HTML5 display-role reset for older browsers
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+
+// ==================
+// = General Styles =
+// ==================
+
+// No margin or padding on docroot
+html
+  margin: 0
+  padding: 0
+
+// No margin or padding on body, sensible font defaults
+body
+  margin: 0
+  padding: 0
+  font-family: helvetica, arial, verdana, sans-serif
+  text-rendering: optimizeLegibility // enable better kerning and ligatures for Webkit. FF has this enabled by default for fonts >= 20px. IE does not support this
+
+// Stack your boxes easily with this
+=floatClear
+  float: left
+  clear: both
+
+
+// Do you hate borders on your images and image links? Because I do.
+img
+  border: 0
+
+// Wow! You also don't like bullets? Great to meet you.
+ul
+  list-style-type: none
+
+// clearfix
+=clearfix
+  zoom: 1
+  
+  &:after
+    content: "."
+    display: block
+    height: 0
+    clear: both
+    visibility: hidden
+
+
+// ================
+// = CSS3 Helpers =
+// ================
+
+// Rounded Corners
+=borderRadius($radius: 5px)
+  border-radius: $radius // Opera 10.5, IE 9, Saf5, Chrome
+  -moz-border-radius: $radius // FF 1+
+  -webkit-border-radius: $radius // FF 1+
+
+// Top-to-Bottom Gradient
+=gradientV($start, $end)
+  background: ($start + $end) / 2 // Non CSS3 browsers get the average color
+  background-image: -moz-linear-gradient(top,  $start, $end) // FF 3.6
+  background-image: -webkit-gradient(linear, left top, left bottom, from($start), to($end)) // Safari 4+, Chrome
+  background-image: -webkit-linear-gradient(top, $start, $end) // Chrome 10+, Safari 5.1+
+  background-image: -o-linear-gradient(top, $start, $end) // Opera 11.10+
+  background-image: linear-gradient(top, $start, $end) // CSS3
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$start}', endColorstr='#{$end}') // IE6 & 7
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$start}', endColorstr='#{$end}') // IE8
+  background-image: -ms-linear-gradient(top, $start, $end) // IE10
+
+// Left-to-Right Gradient
+=gradientH($start, $end)
+  background: ($start + $end) / 2 // Non CSS3 browsers get the average color
+  background-image: -moz-linear-gradient(left,  $start, $end) // FF 3.6
+  background-image: -webkit-gradient(linear, left center, right center, from($start), to($end)) // Safari 4+, Chrome
+  background-image: -webkit-linear-gradient(left center, right center, from($start), to($end)) // Chrome 10+, Safari 5.1+
+  background-image: -o-linear-gradient(left, $start, $end) // Opera 11.10+
+  background-image: linear-gradient(left, $start, $end) // CSS3
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$start}', endColorstr='#{$end}', GradientType=1) // IE6 & 7
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$start}', endColorstr='#{$end}', GradientType=1) // IE8
+  background-image: -ms-linear-gradient(left, $start, $end) // IE10
+
+// Drop shadow
+=boxShadow($xOffset, $yOffset, $blur, $color)
+  -moz-box-shadow: $xOffset $yOffset $blur $color // FF3.5+
+  -webkit-box-shadow: $xOffset $yOffset $blur $color // Saf3.0+, Chrome
+  box-shadow: $xOffset $yOffset $blur $color // Opera 10.5, IE9+, Chrome 10+
+
+// Transition
+=transition($property, $time, $easing)
+  -moz-transition: $property $time $easing // FF4+
+  -o-transition: $property $time $easing // Opera 10.5+
+  -webkit-transition: $property $time $easing // Safari 3.2+, Chrome
+  -ms-transition: $property $time $easing // IE10
+  transition: $property $time $easing // CSS3
+
+
+// ===========================
+// = Centered Content Blocks =
+// ===========================
+
+// For designs that involve a centered column of fixed with, I've found that
+// for great browser compatability, it's useful to separate page elements
+// into discreet horizontal chunks when possible. These two classes help.
+//
+// example:
+// <div class="wrapOut">
+//   <div class="wrapIn">
+//     header content here
+//   </div>
+// </div>
+// <div class="wrapOut">
+//   <div class="wrapIn">
+//     your main content goes here
+//   </div>
+// </div>
+
+// set the width of your body column
+$contentWidth: 960px
+
+html
+  width: 100%
+  height: 100%
+  min-width: $contentWidth // set so that browsers resized smaller do not change column content
+
+body
+  position: relative // to enable correct absolute positioning
+
+.wrapOut
+  width: 100%
+  +floatClear
+  min-width: $contentWidth
+
+.wrapIn
+  width: $contentWidth
+  margin: 0 auto
+
+
+// ======================================================
+// = Horizontal Centering for Objects of Variable Width =
+// ======================================================
+
+// example:
+//<div class="outer">
+//  <div class="inner">The amount of text in this div can change, and it would still be centered</div>
+//</div>
+
+// It's worth noting that since .outer is positioned in the middle, it could protrude relatively
+// far off to the right depending on the width of the object being centered. I usually set
+// .outer's parent to overflow: hidden to make sure this doesn't affect the layout.
+
+.outer
+  +floatClear
+  position: relative
+  left: 50%
+
+.inner
+  position: relative
+  left: -50%
+
+
+// =========================
+// = Call To Action Button =
+// =========================
+
+// Shiny buttons make people want to click them! Just add the class callToAction to any link!
+
+// Master color: change this one value to change all states of the button
+$buttonColor:  #c97200
+
+// Slave colors
+$defaultStart: lighten($buttonColor, 35%)
+$defaultEnd:   $buttonColor
+$borderColor:  darken($buttonColor, 50%)
+
+.callToAction
+  +floatClear
+  margin: 10px 0 0 0
+  padding: 4px 13px 2px 13px
+  
+  font-size: 30px
+  color: #fff
+  text-decoration: none
+  letter-spacing: .1em
+  text-transform: uppercase
+  text-shadow: rgba(0,0,0,0.2) -1px 0, rgba(0,0,0,0.2) 0 -1px, rgba(255,255,255,0.2) 0 1px
+  
+  border: 1px solid $borderColor
+  
+  +borderRadius(6px)
+  
+  +boxShadow(0px, 0px, 2px, $borderColor)
+  
+  background: (($defaultStart + $defaultEnd) / 2) // Non CSS3 browsers
+  background: -moz-linear-gradient(top,  $defaultStart, $defaultStart 46%, $defaultEnd 54%, $defaultEnd) // FF 3.6+
+  background: -webkit-gradient(linear, left top, left bottom, from($defaultStart), color-stop(0.46, $defaultStart), color-stop(0.54, $defaultEnd), to($defaultEnd)) // Safari 4+, Chrome
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$defaultStart}', endColorstr='#{$defaultEnd}') // IE6 & 7
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$defaultStart}', endColorstr='#{$defaultEnd}') // IE8
+
+.callToAction:hover
+  color:  #fff
+
+  $cta_hover_start: darken($defaultStart, 20%)
+  $cta_hover_end:   darken($defaultEnd, 20%)
+
+  background: (($cta_hover_start + $cta_hover_end) / 2) // Non CSS3 browsers
+  background: -moz-linear-gradient(top, $cta_hover_start, $cta_hover_start 46%, $cta_hover_end 54%, $cta_hover_end) // FF 3.6+
+  background: -webkit-gradient(linear, left top, left bottom, from($cta_hover_start), color-stop(0.46, $cta_hover_start), color-stop(0.54, $cta_hover_end), to($cta_hover_end)) // Safari 4+, Chrome
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$cta_hover_start}', endColorstr='#{$cta_hover_end}') // IE6 & 7
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$cta_hover_start}', endColorstr='#{$cta_hover_end}') // IE8
+
+.callToAction:active
+  color: #fff
+
+  $cta_active_start: darken($defaultStart, 40%)
+  $cta_active_end: darken($defaultEnd, 40%)
+
+  background: (($cta_active_start + $cta_active_end) / 2) // Non CSS3 browsers
+  background: -moz-linear-gradient(top, $cta_active_start, $cta_active_start 46%, $cta_active_end 54%, $cta_active_end) // FF 3.6+
+  background: -webkit-gradient(linear, left top, left bottom, from($cta_active_start), color-stop(0.46, $cta_active_start), color-stop(0.54, $cta_active_end), to($cta_active_end)) // Safari 4+, Chrome
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$cta_active_start}', endColorstr='#{$cta_active_end}') // IE6 & 7
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$cta_active_start}', endColorstr='#{$cta_active_end}') // IE8
