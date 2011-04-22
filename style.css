@@ -186,15 +186,15 @@ img {
 ul {
   list-style-type: none;
 }
+.clearfix {
+  zoom: 1;
+}
 .clearfix:after {
   content: ".";
   display: block;
   height: 0;
   clear: both;
   visibility: hidden;
-}
-.clearfix {
-  display: block;
 }
 /* ================== */
 /* = General Styles = */
@@ -441,6 +441,16 @@ h1 span {
   padding: 15px;
   background: #ff6464;
   border: 1px solid #ff3232;
+}
+#clearfix {
+  zoom: 1;
+}
+#clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
 }
 #lastExample {
   margin-bottom: 0;
