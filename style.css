@@ -200,7 +200,7 @@ ul {
 /* = General Styles = */
 /* ================== */
 body {
-  background: #5f9cad;
+  background: #69a6b7;
   color: #04232b;
   font-size: 18px;
 }
@@ -208,18 +208,18 @@ a {
   color: #000;
 }
 a:hover {
-  color: #fba432;
+  color: #ffa52e;
   text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
 }
 h2 {
-  font-size: 30px;
-  color: #fba432;
+  font-size: 27px;
+  color: #ffa52e;
   font-weight: bold;
-  text-shadow: 0 -1px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+  text-shadow: 0 -1px rgba(0, 0, 0, 0.2), 0 1px rgba(0, 0, 0, 0.1);
   padding: 0 0 10px 0;
 }
 h2 a {
-  color: #fba432;
+  color: #ffa52e;
   cursor: default;
 }
 .note {
@@ -246,21 +246,22 @@ pre {
 /* ========== */
 /* = Header = */
 /* ========== */
-#shadowHelper {
+/*#shadowHelper{
   overflow: hidden;
   padding: 4px 0 10px 0;
   margin: -4px 0 0 0;
-}
+}*/
 #header {
-  background: #355f6b;
+  background: #3e6a76;
   padding: 15px 0;
   margin: 0 0 30px 0;
   color: #cccccc;
   letter-spacing: 0.1em;
   font-style: oblique;
   float: left;
-  /*  .boxShadow(0, 3px, 7px, #355761 - 30%);*/
-
+  -moz-box-shadow: 0 3px 7px #173943;
+  -webkit-box-shadow: 0 3px 7px #173943;
+  box-shadow: 0 3px 7px #173943;
 }
 h1 {
   display: inline;
@@ -268,7 +269,7 @@ h1 {
   font-style: normal;
   color: #f4f0e4;
   letter-spacing: 0.1em;
-  font-size: 35px;
+  font-size: 37px;
   text-shadow: 0px -1px rgba(0, 0, 0, 0.7), 0px 1px rgba(255, 255, 255, 0.2);
   float: left;
   margin: 0 20px 0 0;
@@ -285,6 +286,9 @@ h1 span {
   position: absolute;
   top: 0;
   right: 0;
+}
+#navigation {
+  font-size: 22px;
 }
 #what ul {
   list-style-type: disc;
@@ -412,7 +416,7 @@ h1 span {
   display: none;
 }
 #centeredContent a:hover {
-  color: #0f4c5d;
+  color: #195667;
   text-shadow: none;
 }
 #centeredContent a:hover > span {

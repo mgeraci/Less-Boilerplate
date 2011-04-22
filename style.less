@@ -4,9 +4,9 @@
 @import 'boilerplate';
 
 // variables
-@blue: #5F9CAD;
+@blue: #5F9CAD + 10%;
 @darkBlue: #04232B;
-@highlight: #c97200 + 50%;
+@highlight: saturate(#c97200 + 50%, 30%);
 @exampleColor1: #f4f0e4;
 @exampleColor2: @exampleColor1 - 60%;
 @gray: #ccc;
@@ -32,10 +32,10 @@ a:hover{
 
 // section titles
 h2{
-  font-size: 30px;
+  font-size: 27px;
   color: @highlight;
   font-weight: bold;
-  text-shadow: 0 -1px rgba(0,0,0,0.3), 0 1px rgba(255,255,255,0.1);
+  text-shadow: 0 -1px rgba(0,0,0,0.2), 0 1px rgba(0,0,0,0.1);
   padding: 0 0 10px 0;
   
   a{
@@ -74,11 +74,11 @@ pre{
 /* = Header = */
 /* ========== */
 
-#shadowHelper{
+/*#shadowHelper{
   overflow: hidden;
   padding: 4px 0 10px 0;
   margin: -4px 0 0 0;
-}
+}*/
 
 #header{
   background: desaturate(@blue, 10%) - 54%;
@@ -88,7 +88,7 @@ pre{
   letter-spacing: 0.1em;
   font-style: oblique;
   float: left;
-/*  .boxShadow(0, 3px, 7px, #355761 - 30%);*/
+  .boxShadow(0, 3px, 7px, #355761 - 30%);
 }
 
 // used in header
@@ -98,7 +98,7 @@ h1{
   font-style: normal;
   color: @exampleColor1;
   letter-spacing: 0.1em;
-  font-size: 35px;
+  font-size: 37px;
   text-shadow: 0px -1px rgba(0,0,0,0.7), 0px 1px rgba(255,255,255,0.2);
   float: left;
   margin: 0 20px 0 0;
@@ -121,6 +121,8 @@ h1{
   top: 0;
   right: 0;
 }
+
+#navigation{font-size: 22px;}
 
 // description and contents
 #what{
