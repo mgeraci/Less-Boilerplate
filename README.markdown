@@ -5,9 +5,11 @@ I decided to go through my recent projects and pull out the most commonly used s
 
 Written in [Less.CSS](http://lesscss.org/), the dynamic stylesheet language.
 
-Check out the [demo](http://mgeraci.github.com/Less-Boilerplate/).
+Demo
+---------
+[Right this way](http://mgeraci.github.com/Less-Boilerplate/).
 
-Contents:
+Contents
 ---------
 - CSS Reset
 - CSS3 Helpers (box radius, gradients, box shadow, transition)
@@ -16,7 +18,7 @@ Contents:
 - A fancy call to action button
 - A few general styles and sensible defaults (including a clearfix)
 
-Usage:
+Usage
 --------
 Include this file in at the top of your LESS stylesheet:
 
