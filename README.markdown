@@ -1,7 +1,7 @@
-Less Boilerplate
+Sass Boilerplate
 =============================
 
-Boilerplate CSS written in [Less.CSS](http://lesscss.org/), the dynamic stylesheet language. It includes: 
+Boilerplate CSS written in [Sass](http://sass-lang.com/), an extension of CSS3. It includes: 
 
 - CSS Reset
 - CSS3 Helpers (box radius, gradients, box shadow, transition)
@@ -10,11 +10,13 @@ Boilerplate CSS written in [Less.CSS](http://lesscss.org/), the dynamic styleshe
 - A fancy call to action button
 - A few general styles and sensible defaults (including a clearfix)
 
-I went through my recent design projects and pulled out these styles that I use all the time to create an easy-to-import stylesheet. They help me get a new design started, and I hope they help you too!
+Sass Boilerplate is a fork/conversion of [Less Boilerplate](https://github.com/mgeraci/Less-Boilerplate).
+
+From mgeraci's original README: "I went through my recent design projects and pulled out these styles that I use all the time to create an easy-to-import stylesheet. They help me get a new design started, and I hope they help you too!"
 
 Demo
 ---------
-[Right this way](http://mgeraci.github.com/Less-Boilerplate/).
+Coming soon.
 
 Usage
 --------
