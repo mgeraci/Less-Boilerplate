@@ -20,7 +20,7 @@ Coming soon.
 
 Usage
 --------
-Include this file in at the top of your LESS stylesheet:
+Include this file in at the top of your Sass/SCSS stylesheet:
 
     @import 'boilerplate';
 
