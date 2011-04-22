@@ -1,16 +1,16 @@
-/* ========================================================= */
-/* =             Boilerplate Less CSS Styles               = */
-/* =  by Michael P. Geraci, 2011 - www.michaelgeraci.com   = */
-/* =  tell me what's missing: mgeraci@gmail.com | @mgeraci = */
-/* =           free for all to use and modify              = */
-/* ========================================================= */
+// ========================================================= //
+// =             Boilerplate Less CSS Styles               = //
+// =  by Michael P. Geraci, 2011 - www.michaelgeraci.com   = //
+// =  tell me what's missing: mgeraci@gmail.com | @mgeraci = //
+// =           free for all to use and modify              = //
+// ========================================================= //
 
 
-/* ============= */
-/* = CSS Reset = */
-/* ============= */
+// ============= //
+// = CSS Reset = //
+// ============= //
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, tt, var, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{
   margin: 0;
   padding: 0;
   border: 0;
@@ -28,9 +28,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* ================ */
-/* = CSS3 Helpers = */
-/* ================ */
+
+// ================ //
+// = CSS3 Helpers = //
+// ================ //
 
 // Rounded Corners
 .borderRadius(@radius){
@@ -72,10 +73,19 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   box-shadow: @xOffset @yOffset @blur @color; // Opera 10.5, IE9+, Chrome 10+
 }
 
+// Transition
+.transition(@property, @time, @easing){
+  -moz-transition: @property @time @easing; // FF4+
+  -o-transition: @property @time @easing; // Opera 10.5+
+  -webkit-transition: @property @time @easing; // Safari 3.2+, Chrome
+  -ms-transition: @property @time @easing; // IE10
+  transition: @property @time @easing; // CSS3
+}
 
-/* =========================== */
-/* = Centered Content Blocks = */
-/* =========================== */
+
+// =========================== //
+// = Centered Content Blocks = //
+// =========================== //
 
 // For designs that involve a centered column of fixed with, I've found that
 // for great browser compatability, it's useful to separate page elements
@@ -94,28 +104,42 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 // </div>
 
 // set the width of your body column
-@bodyWidth: 960px;
+@contentWidth: 960px;
+
+html{
+  width: 100%;
+  height: 100%;
+  min-width: @contentWidth; // set so that browsers resized smaller do not change column content
+}
+
+body{
+  position: relative; // to enable correct absolute positioning
+}
 
 .wrapOut{
   width: 100%;
   .floatClear;
-  min-width: @bodyWidth;
+  min-width: @contentWidth;
 }
 
 .wrapIn{
-  width: @bodyWidth;
+  width: @contentWidth;
   margin: 0 auto;
 }
 
 
-/* ====================================================== */
-/* = Horizontal Centering for Objects of Variable Width = */
-/* ====================================================== */
+// ====================================================== //
+// = Horizontal Centering for Objects of Variable Width = //
+// ====================================================== //
 
 // example:
 //<div class="outer">
-//  <div class="inner">The amount of text in this div could change, and it would still be centered</div>
+//  <div class="inner">The amount of text in this div can change, and it would still be centered</div>
 //</div>
+
+// It's worth noting that since .outer is positioned in the middle, it could protrude relatively
+// far off to the right depending on the width of the object being centered. I usually set
+// .outer's parent to overflow: hidden to make sure this doesn't affect the layout.
 
 .outer{
   .floatClear;
@@ -129,9 +153,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 
-/* ========================= */
-/* = Call To Action Button = */
-/* ========================= */
+// ========================= //
+// = Call To Action Button = //
+// ========================= //
 
 // Shiny buttons make people want to click them! Just add the class callToAction to any link!
 
@@ -195,9 +219,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 
-/* ================== */
-/* = General Styles = */
-/* ================== */
+// ================== //
+// = General Styles = //
+// ================== //
 
 // No margin or padding on docroot
 html{

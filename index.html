@@ -8,12 +8,14 @@
     <!-- check out style.less to see the real code -->
   </head>
   <body>
-    <a href="http://github.com/mgeraci/Less-Boilerplate"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
-    <div id="header" class="wrapOut">
-      <div class="wrapIn">
-        <h1><span>{}</span> Less Boilerplate</h1>
+    <a id="forkMe" href="http://github.com/mgeraci/Less-Boilerplate"><img src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+    <!-- <div id="shadowHelper"> -->
+      <div id="header" class="wrapOut">
+        <div class="wrapIn">
+          <h1><span>{}</span> Less Boilerplate</h1>
+        </div>
       </div>
-    </div>
+    <!-- </div> -->
     <div id="content" class="wrapOut">
       <div class="wrapIn">
         <div class="section">
@@ -24,7 +26,7 @@
           Boilerplate CSS written in <a href="http://www.lesscss.org">Less</a>, the dynamic stylesheet language. It includes:
           <br><br><ul>
             <li>CSS Reset</li>
-            <li>CSS3 Helpers (box shadow, gradients, box radius)</li>
+            <li>CSS3 Helpers (box radius, gradients, box shadow, transition)</li>
             <li>Centered column blocks</li>
             <li>Horizontal centering for objects of variable width</li>
             <li>A fancy call to action button</li>
@@ -47,11 +49,13 @@
             <div id="rounded">
               .borderRadius(15px);
               <br>
-              <br><i>compiles to</i>
+              <br>compiles to
               <br>
-              <br>border-radius: 15px;
-              <br>-moz-border-radius: 15px;
-              <br>-webkit-border-radius: 15px;
+              <span class="CSS">
+                <br>border-radius: 15px;
+                <br>-moz-border-radius: 15px;
+                <br>-webkit-border-radius: 15px;
+              </span>
             </div>
           </div>
           <div class="description">
@@ -66,32 +70,36 @@
             <div id="gradient1">
               .gradientV(@lavender, @red);
               <br>
-              <br><i>compiles to</i>
+              <br>compiles to
               <br>
-              <br>background: #ff859e;
-              <br>background-image: -moz-linear-gradient(top, #e3a6d8, #ff6464);
-              <br>background-image: -webkit-gradient(linear, left top, left bottom, from(#e3a6d8), to(#ff6464));
-              <br>background-image: -webkit-linear-gradient(top, #e3a6d8, #ff6464);
-              <br>background-image: -o-linear-gradient(top, #e3a6d8, #ff6464);
-              <br>background-image: linear-gradient(top, #e3a6d8, #ff6464);
-              <br>filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e3a6d8, endColorstr=#ff6464);
-              <br>-ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e3a6d8, endColorstr=#ff6464);
-              <br>background-image: -ms-linear-gradient(top, #ff6464, #ff6464);
+              <span class="CSS">
+                <br>background: #ff859e;
+                <br>background-image: -moz-linear-gradient(top, #e3a6d8, #ff6464);
+                <br>background-image: -webkit-gradient(linear, left top, left bottom, from(#e3a6d8), to(#ff6464));
+                <br>background-image: -webkit-linear-gradient(top, #e3a6d8, #ff6464);
+                <br>background-image: -o-linear-gradient(top, #e3a6d8, #ff6464);
+                <br>background-image: linear-gradient(top, #e3a6d8, #ff6464);
+                <br>filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e3a6d8, endColorstr=#ff6464);
+                <br>-ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e3a6d8, endColorstr=#ff6464);
+                <br>background-image: -ms-linear-gradient(top, #ff6464, #ff6464);
+              </span>
             </div>
             <div id="gradient2">
               .gradientH(@lavender, @red);
               <br>
-              <br><i>compiles to</i>
+              <br>compiles to
               <br>
-              <br>background: #ff859e;
-              <br>background-image: -moz-linear-gradient(left, #e3a6d8, #ff6464);
-              <br>background-image: -webkit-gradient(linear, left center, right center, from(#e3a6d8), to(#ff6464));
-              <br>background-image: -webkit-linear-gradient(left center, right center, from(#e3a6d8), to(#ff6464));
-              <br>background-image: -o-linear-gradient(left, #e3a6d8, #ff6464);
-              <br>background-image: linear-gradient(left, #e3a6d8, #ff6464);
-              <br>filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e3a6d8, endColorstr=#ff6464, GradientType=1);
-              <br>-ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e3a6d8, endColorstr=#ff6464, GradientType=1);
-              <br>background-image: -ms-linear-gradient(left, #ff6464, #ff6464);
+              <span class="CSS">
+                <br>background: #ff859e;
+                <br>background-image: -moz-linear-gradient(left, #e3a6d8, #ff6464);
+                <br>background-image: -webkit-gradient(linear, left center, right center, from(#e3a6d8), to(#ff6464));
+                <br>background-image: -webkit-linear-gradient(left center, right center, from(#e3a6d8), to(#ff6464));
+                <br>background-image: -o-linear-gradient(left, #e3a6d8, #ff6464);
+                <br>background-image: linear-gradient(left, #e3a6d8, #ff6464);
+                <br>filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e3a6d8, endColorstr=#ff6464, GradientType=1);
+                <br>-ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e3a6d8, endColorstr=#ff6464, GradientType=1);
+                <br>background-image: -ms-linear-gradient(left, #ff6464, #ff6464);
+              </span>
             </div>
           </div>
           <div class="description">
@@ -102,11 +110,34 @@
             <div id="shadow">
               .boxShadow(3px, 3px, 6px, #000);
               <br>
-              <br><i>compiles to</i>
+              <br>compiles to
               <br>
-              <br>-moz-box-shadow: 3px 3px 6px #000000;
-              <br>-webkit-box-shadow: 3px 3px 6px #000000;
-              <br>box-shadow: 3px 3px 6px #000000;
+              <span class="CSS">
+                <br>-moz-box-shadow: 3px 3px 6px #000000;
+                <br>-webkit-box-shadow: 3px 3px 6px #000000;
+                <br>box-shadow: 3px 3px 6px #000000;
+              </span>
+            </div>
+          </div>
+          <div class="description">
+            Transition
+            <pre><span style="color: #8ccbfe;">#element</span>{.transition(@property, @time, @easing);}</pre>
+          </div>
+          <div class="example">
+            <div id="transition">
+              .transition(all, 1s, ease);
+              <br>
+              <br>compiles to
+              <br>
+              <br><span class="CSS">
+                -moz-transition: all 1s ease;
+                <br>-o-transition: all 1s ease;
+                <br>-webkit-transition: all 1s ease;
+                <br>-ms-transition: all 1s ease;
+                <br>transition: all 1s ease;
+              </span>
+              <br>
+              <br>hover on me!
             </div>
           </div>
           <div class="description example">
@@ -140,7 +171,7 @@
           <div class="example">
             <div class="outer">
               <div id="centeredContent" class="inner">
-                This is variable width, but always centered. <a href="#">Hover here to try it!<span>&nbsp;&nbsp;&nbsp;&nbsp;See? Still centered.</span></a>
+                This is variable width, but always centered. <a href="#">Hover to try it!<span>&nbsp;&nbsp;&nbsp;&nbsp;See? Still centered.</span></a>
               </div>
             </div>
           </div>
@@ -191,6 +222,7 @@
                   <br><i>parent expands to accomodate the child's content</i>
                 </div>
                 set width,
+                <br>no float,
                 <br>added class "clearfix"
               </div>
             </div>
