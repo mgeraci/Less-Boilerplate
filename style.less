@@ -6,8 +6,9 @@
 // variables
 @blue: #5F9CAD;
 @darkBlue: #04232B;
-@lavender: #E3A6D8;
-@red: #f00 + 100%;
+@highlight: #c97200 + 50%;
+@exampleColor1: #f4f0e4;
+@exampleColor2: @exampleColor1 - 60%;
 @gray: #ccc;
 
 
@@ -25,20 +26,20 @@ body{
 // general link color
 a{color: #000;}
 a:hover{
-  color: @buttonColor + 50%;
+  color: @highlight;
   text-shadow: 0 -1px rgba(0,0,0,0.3);
 }
 
 // section titles
 h2{
   font-size: 30px;
-  color: @buttonColor + 50%;
+  color: @highlight;
   font-weight: bold;
   text-shadow: 0 -1px rgba(0,0,0,0.3), 0 1px rgba(255,255,255,0.1);
   padding: 0 0 10px 0;
   
   a{
-    color: @buttonColor + 50%;
+    color: @highlight;
     cursor: default;
   }
 }
@@ -135,8 +136,8 @@ h1{
   padding: 15px;
   width: 290px;
   margin: 0 0 20px 0;
-  border: 1px solid @lavender - 50%;
-  background: @lavender;
+  border: 1px solid @exampleColor1 - 50%;
+  background: @exampleColor1;
 }
 
 // example descriptions
@@ -157,6 +158,7 @@ h1{
 #rounded{
   .box;
   .borderRadius(15px);
+/*  .translucent(@exampleColor1, 0.5);*/
 }
 
 // box shadow
@@ -165,21 +167,21 @@ h1{
 }
 
 // lighter color for compiled code examples
-.CSS{color: @lavender - 120%;}
+.CSS{color: @exampleColor1 - 110%;}
 
 // vertical gradient
 #gradient1{
   .box;
   width: 830px;
   margin: 0 30px 20px 0;
-  .gradientV(@lavender, @red);
+  .gradientV(@exampleColor1, @exampleColor2);
 }
 
 // horizontal gradient
 #gradient2{
   .box;
   width: 830px;
-  .gradientH(@lavender, @red);
+  .gradientH(@exampleColor1, @exampleColor2);
 }
 
 #shadow{
@@ -195,15 +197,15 @@ h1{
 }
 
 #transition:hover{
-  background: @red;
+  background: @exampleColor2;
   
   .transition(all, 1s, ease);
 }
 
 // centering variable width
 #centeredContent{
-  background: @lavender;
-  border: 1px solid @lavender - 50%;
+  background: @exampleColor1;
+  border: 1px solid @exampleColor1 - 50%;
   padding: 20px;
   
   a span{
@@ -232,16 +234,16 @@ h1{
 .clearfixOuter{
   width: 350px;
   padding: 15px;
-  background: @lavender;
-  border: 1px solid @lavender - 50%;
+  background: @exampleColor1;
+  border: 1px solid @exampleColor1 - 50%;
 }
 
 .clearfixInner{
   float: right;
   width: 50%;
   padding: 15px;
-  background: @red;
-  border: 1px solid @red - 50%;
+  background: @exampleColor2;
+  border: 1px solid @exampleColor2 - 50%;
 }
 
 #clearfix{.clearfix;}
