@@ -10,7 +10,7 @@ Check out the [demo](http://mgeraci.github.com/Less-Boilerplate/).
 Contents:
 ---------
 - CSS Reset
-- CSS3 Helpers (box shadow, gradients, box radius)
+- CSS3 Helpers (box radius, gradients, box shadow, transition)
 - Centered column blocks
 - Horizontal centering for objects of variable width
 - A fancy call to action button
