@@ -49,7 +49,7 @@
             <div id="rounded">
               .borderRadius(15px);
               <br>
-              <br>compiles to
+              <br>hover to see compiled code
               <br>
               <span class="CSS">
                 <br>-moz-border-radius: 15px;
@@ -59,46 +59,130 @@
             </div>
           </div>
           <div class="description">
-            Gradients
+            Gradients (2 Color)
             <pre><span style="color: #7c7c7c;">// Vertical</span>
-<span style="color: #8ccbfe;">#element</span>{.gradientV(startColor, endColor);}
+<span style="color: #8ccbfe;">#element</span>{.gradientV(color1, color2);}
 
 <span style="color: #7c7c7c;">// Horizontal</span>
-<span style="color: #8ccbfe;">#element</span>{.gradientH(startColor, endColor);}</pre>
+<span style="color: #8ccbfe;">#element</span>{.gradientH(color1, color2);}</pre>
           </div>
           <div class="example">
-            <div id="gradient1">
-              .gradientV(@exampleColor1, @exampleColor2);
+            <div id="gradientV" class="gradient">
+              .gradientV(#F0CED6, #CED3F0);
               <br>
-              <br>compiles to
+              <br>hover to see compiled code
               <br>
               <span class="CSS">
-                <br>background: #ff859e;
-                <br>background-image: -moz-linear-gradient(top, #e3a6d8, #ff6464);
-                <br>background-image: -webkit-gradient(linear, left top, left bottom, from(#e3a6d8), to(#ff6464));
-                <br>background-image: -webkit-linear-gradient(top, #e3a6d8, #ff6464);
-                <br>background-image: -o-linear-gradient(top, #e3a6d8, #ff6464);
-                <br>background-image: linear-gradient(top, #e3a6d8, #ff6464);
-                <br>filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e3a6d8, endColorstr=#ff6464);
-                <br>-ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e3a6d8, endColorstr=#ff6464);
-                <br>background-image: -ms-linear-gradient(top, #ff6464, #ff6464);
+                <br>background: #dfd1e3;
+                <br>background-image: -moz-linear-gradient(top, #f0ced6, #ced3f0);
+                <br>background-image: -webkit-gradient(linear, left top, left bottom, from(#f0ced6), to(#ced3f0));
+                <br>background-image: -webkit-linear-gradient(top, #f0ced6, #ced3f0);
+                <br>background-image: -o-linear-gradient(top, #f0ced6, #ced3f0);
+                <br>background-image: linear-gradient(top, #f0ced6, #ced3f0);
+                <br>filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#f0ced6, endColorstr=#ced3f0);
+                <br>-ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#f0ced6, endColorstr=#ced3f0);
+                <br>background-image: -ms-linear-gradient(top, #ced3f0, #ced3f0);
               </span>
             </div>
-            <div id="gradient2">
-              .gradientH(@exampleColor1, @exampleColor2);
+            <div id="gradientH" class="gradient">
+              .gradientH(#F0CED6, #CED3F0);
               <br>
-              <br>compiles to
+              <br>hover to see compiled code
               <br>
               <span class="CSS">
-                <br>background: #ff859e;
-                <br>background-image: -moz-linear-gradient(left, #e3a6d8, #ff6464);
-                <br>background-image: -webkit-gradient(linear, left center, right center, from(#e3a6d8), to(#ff6464));
-                <br>background-image: -webkit-linear-gradient(left center, right center, from(#e3a6d8), to(#ff6464));
-                <br>background-image: -o-linear-gradient(left, #e3a6d8, #ff6464);
-                <br>background-image: linear-gradient(left, #e3a6d8, #ff6464);
-                <br>filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e3a6d8, endColorstr=#ff6464, GradientType=1);
-                <br>-ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e3a6d8, endColorstr=#ff6464, GradientType=1);
-                <br>background-image: -ms-linear-gradient(left, #ff6464, #ff6464);
+                <br>background: #dfd1e3;
+                <br>background-image: -moz-linear-gradient(left, #f0ced6, #ced3f0);
+                <br>background-image: -webkit-gradient(linear, left center, right center, from(#f0ced6), to(#ced3f0));
+                <br>background-image: -webkit-linear-gradient(left center, right center, from(#f0ced6), to(#ced3f0));
+                <br>background-image: -o-linear-gradient(left, #f0ced6, #ced3f0);
+                <br>background-image: linear-gradient(left, #f0ced6, #ced3f0);
+                <br>filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#f0ced6, endColorstr=#ced3f0, GradientType=1);
+                <br>-ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#f0ced6, endColorstr=#ced3f0, GradientType=1);
+                <br>background-image: -ms-linear-gradient(left, #ced3f0, #ced3f0);
+              </span>
+            </div>
+          </div>
+          <div class="description">
+            Gradients (3 Color)
+            <pre><span style="color: #7c7c7c;">// Vertical (position is integer out of 100)</span>
+<span style="color: #8ccbfe;">#element</span>{.gradientV3(color1, color2, color2Pos, color4);}
+
+<span style="color: #7c7c7c;">// Horizontal (position is integer out of 100)</span>
+<span style="color: #8ccbfe;">#element</span>{.gradientH3(color1, color2, color2Pos, color4);}</pre>
+          </div>
+          <div class="example">
+            <div id="gradientV3" class="gradient">
+              .gradientV3(#F0CED6, #CED3F0, 50, #D2F0CE);
+              <br>
+              <br>hover to see compiled code
+              <br>
+              <span class="CSS">
+                <br>background: #e1dfd2;
+                <br>background-image: -moz-linear-gradient(top, #f0ced6, #ced3f0 50%, #d2f0ce);
+                <br>background-image: -webkit-gradient(linear, left top, left bottom, from(#f0ced6), color-stop(0.5, #ced3f0), to(#d2f0ce));
+                <br>background-image: -webkit-linear-gradient(top, from(#f0ced6), color-stop(0.5, #ced3f0), to(#d2f0ce));
+                <br>background-image: -o-linear-gradient(top, #f0ced6 0%, #ced3f0 50%, #d2f0ce 100%);
+                <br>filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#f0ced6, endColorstr=#d2f0ce);
+                <br>-ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#f0ced6, endColorstr=#d2f0ce);
+                <br>background-image: linear-gradient(top, #f0ced6 0%, #ced3f0 50%, #d2f0ce 100%);
+              </span>
+            </div>
+            <div id="gradientH3" class="gradient">
+              .gradientH3(#F0CED6, #CED3F0, 50, #D2F0CE);
+              <br>
+              <br>hover to see compiled code
+              <br>
+              <span class="CSS">
+                <br>background: #e1dfd2;
+                <br>background-image: -moz-linear-gradient(left, #f0ced6, #ced3f0 50%, #d2f0ce);
+                <br>background-image: -webkit-gradient(linear, left center, right center, from(#f0ced6), color-stop(0.5, #ced3f0), to(#d2f0ce));
+                <br>background-image: -webkit-linear-gradient(left, from(#f0ced6), color-stop(0.5, #ced3f0), to(#d2f0ce));
+                <br>background-image: -o-linear-gradient(left, #f0ced6 0%, #ced3f0 50%, #d2f0ce 100%);
+                <br>filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#f0ced6, endColorstr=#d2f0ce);
+                <br>-ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#f0ced6, endColorstr=#d2f0ce);
+                <br>background-image: linear-gradient(left, #f0ced6 0%, #ced3f0 50%, #d2f0ce 100%);
+              </span>
+            </div>
+          </div>
+          <div class="description">
+            Gradients (4 Color)
+            <pre><span style="color: #7c7c7c;">// Vertical (position is integer out of 100)</span>
+<span style="color: #8ccbfe;">#element</span>{.gradientV4(color1, color2, color2Pos, color3, color3Pos, color4);}
+
+<span style="color: #7c7c7c;">// Horizontal (position is integer out of 100)</span>
+<span style="color: #8ccbfe;">#element</span>{.gradientH4(color1, color2, color2Pos, color3, color3Pos, color4);}</pre>
+          </div>
+          <div class="example">
+            <div id="gradientV4" class="gradient">
+              .gradientV4(#F2F1CB, #F0CED6, 33, #CED3F0, 66, #D2F0CE);
+              <br>
+              <br>hover to see compiled code
+              <br>
+              <span class="CSS">
+                <br>background: #e2f1cd;
+                <br>background-image: -moz-linear-gradient(top, #f2f1cb, #f0ced6 33%, #ced3f0 66%, #d2f0ce);
+                <br>background-image: -webkit-gradient(linear, left top, left bottom, from(#f2f1cb), color-stop(0.33, #f0ced6), color-stop(0.66, #ced3f0), to(#d2f0ce));
+                <br>background-image: -webkit-linear-gradient(top, from(#f2f1cb), color-stop(0.33, #f0ced6), color-stop(0.66, #ced3f0), to(#d2f0ce));
+                <br>background-image: -o-linear-gradient(top, #f2f1cb 0%, #f0ced6 33%, #ced3f0 66%, #d2f0ce 100%);
+                <br>filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#f2f1cb, endColorstr=#d2f0ce);
+                <br>-ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#f2f1cb, endColorstr=#d2f0ce);
+                <br>background-image: linear-gradient(top, #f2f1cb 0%, #f0ced6 33%, #ced3f0 66%, #d2f0ce 100%);
+              </span>
+            </div>
+            <div id="gradientH4" class="gradient">
+              .gradientH4(#F2F1CB, #F0CED6, 33, #CED3F0, 66, #D2F0CE);
+              <br>
+              <br>hover to see compiled code
+              <br>
+              <span class="CSS">
+                <br>background: #e2f1cd;
+                <br>background-image: -moz-linear-gradient(left, #f2f1cb, #f0ced6 33%, #ced3f0 66%, #d2f0ce);
+                <br>background-image: -webkit-gradient(linear, left center, right center, from(#f2f1cb), color-stop(0.33, #f0ced6), color-stop(0.66, #ced3f0), to(#d2f0ce));
+                <br>background-image: -webkit-linear-gradient(left center, right center, from(#f2f1cb), color-stop(0.33, #f0ced6), color-stop(0.66, #ced3f0), to(#d2f0ce));
+                <br>background-image: -o-linear-gradient(left, #f2f1cb 0%, #f0ced6 33%, #ced3f0 66%, #d2f0ce 100%);
+                <br>filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#f2f1cb, endColorstr=#d2f0ce, GradientType=1);
+                <br>-ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#f2f1cb, endColorstr=#d2f0ce, GradientType=1);
+                <br>background-image: linear-gradient(left, #f2f1cb 0%, #f0ced6 33%, #ced3f0 66%, #d2f0ce 100%);
               </span>
             </div>
           </div>
@@ -111,7 +195,7 @@
             <div id="shadow">
               .boxShadow(3px 3px 6px #000);
               <br>
-              <br>compiles to
+              <br>hover to see compiled code
               <br>
               <span class="CSS">
                 <br>-moz-box-shadow: 3px 3px 6px #000000;
@@ -122,7 +206,7 @@
             <div id="shadow2">
               .boxShadow(2px 2px 3px #000 inset);
               <br>
-              <br>compiles to
+              <br>hover to see compiled code
               <br>
               <span class="CSS">
                 <br>-moz-box-shadow: 2px 2px 3px #000000 inset;
@@ -140,20 +224,18 @@
             <div id="transition">
               .transition(all 1s ease);
               <br>
-              <br>compiles to
-              <br>
-              <br><span class="CSS">
-                -moz-transition: all 1s ease;
+              <br>hover to see effect (and compiled code)
+              <span class="CSS">
+                <br>
+                <br>-moz-transition: all 1s ease;
                 <br>-o-transition: all 1s ease;
                 <br>-webkit-transition: all 1s ease;
                 <br>-ms-transition: all 1s ease;
                 <br>transition: all 1s ease;
               </span>
-              <br>
-              <br>hover on me!
             </div>
           </div>
-          <div class="description example">
+          <div class="description noExample">
             <b>Stacking &amp; Centering</b>
             <br>
             <br>For designs that involve a centered column of fixed width, I've found that for that for great browser compatability, it's useful to separate page elements into discreet horizontal chunks when possible. The classes wrapOut and wrapIn help.

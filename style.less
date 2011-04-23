@@ -144,11 +144,26 @@ h1{
   margin: 0 0 30px 0;
 }
 
+// description with no associated example
+.noExample{
+  margin: 0 0 50px 0;
+}
+
 // example contents
 .example{
   width: @contentWidth;
   .floatClear;
   margin: 0 0 50px 0;
+  
+  // hide compiled code
+  span{display: none;}
+}
+
+// show compiled code on hover
+.example{
+  div:hover{
+    span{display: inline;}
+  }
 }
 
 // round corners
@@ -161,19 +176,49 @@ h1{
 // lighter color for compiled code examples
 .CSS{color: @exampleColor1 - 110%;}
 
-// vertical gradient
-#gradient1{
+// general gradient style
+.gradient{
   .box;
-  width: 830px;
-  margin: 0 30px 20px 0;
-  .gradientV(@exampleColor1, @exampleColor2);
+  width: 437px;
+  word-wrap: break-word;
+}
+
+// left gradient style
+.left{
+  clear: left;
+  margin: 0 20px 20px 0;
+}
+
+// vertical gradient
+#gradientV{
+  .left;
+  .gradientV(#F0CED6, #CED3F0);
 }
 
 // horizontal gradient
-#gradient2{
-  .box;
-  width: 830px;
-  .gradientH(@exampleColor1, @exampleColor2);
+#gradientH{
+  clear: right;
+  .gradientH(#F0CED6, #CED3F0);
+}
+
+#gradientV3{
+  .left;
+  .gradientV3(#F0CED6, #CED3F0, 50, #D2F0CE);
+}
+
+#gradientH3{
+  clear: right;
+  .gradientH3(#F0CED6, #CED3F0, 50, #D2F0CE);
+}
+
+#gradientV4{
+  .left;
+  .gradientV4(#F2F1CB, #F0CED6, 33, #CED3F0, 66, #D2F0CE);
+}
+
+#gradientH4{
+  clear: right;
+  .gradientH4(#F2F1CB, #F0CED6, 33, #CED3F0, 66, #D2F0CE);
 }
 
 // box shadow
