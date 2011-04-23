@@ -162,7 +162,10 @@
           </div>
           <div class="description">
             Horizontal Centering for Objects of Variable Width
-            <pre><span style="color: #8ccbfe;">&lt;div</span> <span style="color: #ffd7b1;">class=</span><span style="color: #99e957;">"outer"</span><span style="color: #8ccbfe;">&gt;</span>
+            <pre><span style="color: #7c7c7c;">// Since .outer is positioned left: 50%, it may protrude far to the
+// right when centering wide objects. I usually set .outer's parent to
+// overflow: hidden to make sure this doesn't affect the layout.</span>
+<span style="color: #8ccbfe;">&lt;div</span> <span style="color: #ffd7b1;">class=</span><span style="color: #99e957;">"outer"</span><span style="color: #8ccbfe;">&gt;</span>
   <span style="color: #8ccbfe;">&lt;div</span> <span style="color: #ffd7b1;">class=</span><span style="color: #99e957;">"inner"</span><span style="color: #8ccbfe;">&gt;</span>
     The contents can change dynamically and still be centered.
   <span style="color: #8ccbfe;">&lt;/div&gt;</span>
