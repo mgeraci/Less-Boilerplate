@@ -329,11 +329,6 @@ h1 span {
   /*  .translucent(@exampleColor1, 0.5);*/
 
 }
-#shadow {
-  -moz-box-shadow: 2px 2px 10px #000000;
-  -webkit-box-shadow: 2px 2px 10px #000000;
-  box-shadow: 2px 2px 10px #000000;
-}
 .CSS {
   color: #868276;
 }
@@ -384,10 +379,27 @@ h1 span {
   margin: 0 0 20px 0;
   border: 1px solid #c2beb2;
   background: #f4f0e4;
+  clear: left;
+  margin: 0 30px 0 0;
   width: 360px;
   -moz-box-shadow: 3px 3px 6px #000000;
   -webkit-box-shadow: 3px 3px 6px #000000;
   box-shadow: 3px 3px 6px #000000;
+}
+#shadow2 {
+  float: left;
+  clear: both;
+  padding: 15px;
+  width: 290px;
+  margin: 0 0 20px 0;
+  border: 1px solid #c2beb2;
+  background: #f4f0e4;
+  border-color: #000;
+  clear: right;
+  width: 400px;
+  -moz-box-shadow: 2px 2px 3px #000000 inset;
+  -webkit-box-shadow: 2px 2px 3px #000000 inset;
+  box-shadow: 2px 2px 3px #000000 inset;
 }
 #transition {
   float: left;
@@ -400,7 +412,7 @@ h1 span {
   width: 360px;
 }
 #transition:hover {
-  background: #b8b4a8;
+  background: #F5FAA0;
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
   -webkit-transition: all 1s ease;

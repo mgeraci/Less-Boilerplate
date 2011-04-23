@@ -104,11 +104,12 @@
           </div>
           <div class="description">
             Drop Shadow
-            <pre><span style="color: #8ccbfe;">#element</span>{.boxShadow(xOffset, yOffset, blur, color);}</pre>
+            <pre><span style="color: #7c7c7c;">// Blur and Inset are optional.</span>
+<span style="color: #8ccbfe;">#element</span>{.boxShadow(xOffset yOffset blur color inset);}</pre>
           </div>
           <div class="example">
             <div id="shadow">
-              .boxShadow(3px, 3px, 6px, #000);
+              .boxShadow(3px 3px 6px #000);
               <br>
               <br>compiles to
               <br>
@@ -118,14 +119,26 @@
                 <br>box-shadow: 3px 3px 6px #000000;
               </span>
             </div>
+            <div id="shadow2">
+              .boxShadow(2px 2px 3px #000 inset);
+              <br>
+              <br>compiles to
+              <br>
+              <span class="CSS">
+                <br>-moz-box-shadow: 2px 2px 3px #000000 inset;
+                <br>-webkit-box-shadow: 2px 2px 3px #000000 inset;
+                <br>box-shadow: 2px 2px 3px #000000 inset;
+              </span>
+            </div>
           </div>
           <div class="description">
             Transition
-            <pre><span style="color: #8ccbfe;">#element</span>{.transition(@property, @time, @easing);}</pre>
+            <pre><span style="color: #7c7c7c;">// Easing is optional</span>
+<span style="color: #8ccbfe;">#element</span>{.transition(property time easing);}</pre>
           </div>
           <div class="example">
             <div id="transition">
-              .transition(all, 1s, ease);
+              .transition(all 1s ease);
               <br>
               <br>compiles to
               <br>

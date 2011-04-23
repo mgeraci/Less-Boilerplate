@@ -67,25 +67,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 // Drop shadow
-.boxShadow(@xOffset, @yOffset, @blur, @color){
-  -moz-box-shadow: @xOffset @yOffset @blur @color; // FF3.5+
-  -webkit-box-shadow: @xOffset @yOffset @blur @color; // Saf3.0+, Chrome
-  box-shadow: @xOffset @yOffset @blur @color; // Opera 10.5, IE9+, Chrome 10+
+.boxShadow(@params){
+  -moz-box-shadow: @params; // FF3.5+
+  -webkit-box-shadow: @params; // Saf3.0+, Chrome
+  box-shadow: @params; // Opera 10.5, IE9+, Chrome 10+
 }
 
 // Transition
-.transition(@property, @time, @easing){
-  -moz-transition: @property @time @easing; // FF4+
-  -o-transition: @property @time @easing; // Opera 10.5+
-  -webkit-transition: @property @time @easing; // Safari 3.2+, Chrome
-  -ms-transition: @property @time @easing; // IE10
-  transition: @property @time @easing; // CSS3
+.transition(@params){
+  -moz-transition: @params; // FF4+
+  -o-transition: @params; // Opera 10.5+
+  -webkit-transition: @params; // Safari 3.2+, Chrome
+  -ms-transition: @params; // IE10
+  transition: @params; // CSS3
 }
-
-// Add an alphatransparency value to any background or border color (via Elyse Holladay), (via Mark Otto)
-//.translucent(@color: @white, @alpha: 1){
-//  background-color: hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
-//}
 
 
 // =========================== //
@@ -188,7 +183,7 @@ body{
   
   .borderRadius(6px);
   
-  .boxShadow(0px, 0px, 2px, @borderColor);
+  .boxShadow(0px 0px 2px @borderColor);
   
   background: ((@defaultStart + @defaultEnd) / 2); // Non CSS3 browsers
   background: -moz-linear-gradient(top,  @defaultStart, @defaultStart 46%, @defaultEnd 54%, @defaultEnd); // FF 3.6+
@@ -254,7 +249,7 @@ img{border: 0;}
 // Wow! You also don't like bullets? Great to meet you.
 ul{list-style-type: none;}
 
-// clearfix
+// clearfix (thanks for the mixin-able syntax, Mark Otto!)
 .clearfix{
   zoom: 1;
   
