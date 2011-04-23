@@ -35,9 +35,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 // Rounded Corners
 .borderRadius(@radius){
-  border-radius: @radius; // Opera 10.5, IE 9, Saf5, Chrome
   -moz-border-radius: @radius; // FF 1+
   -webkit-border-radius: @radius; // FF 1+
+  border-radius: @radius; // Opera 10.5, IE 9, Saf5, Chrome
 }
 
 // Top-to-Bottom Gradient
@@ -81,6 +81,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   -ms-transition: @property @time @easing; // IE10
   transition: @property @time @easing; // CSS3
 }
+
+// Add an alphatransparency value to any background or border color (via Elyse Holladay), (via Mark Otto)
+//.translucent(@color: @white, @alpha: 1){
+//  background-color: hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
+//}
 
 
 // =========================== //
