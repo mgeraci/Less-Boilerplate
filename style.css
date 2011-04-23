@@ -138,9 +138,9 @@ body {
   text-transform: uppercase;
   text-shadow: rgba(0, 0, 0, 0.2) -1px 0, rgba(0, 0, 0, 0.2) 0 -1px, rgba(255, 255, 255, 0.2) 0 1px;
   border: 1px solid #974000;
-  border-radius: 6px;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
+  border-radius: 6px;
   -moz-box-shadow: 0px 0px 2px #974000;
   -webkit-box-shadow: 0px 0px 2px #974000;
   box-shadow: 0px 0px 2px #974000;
@@ -323,9 +323,9 @@ h1 span {
   margin: 0 0 20px 0;
   border: 1px solid #c2beb2;
   background: #f4f0e4;
-  border-radius: 15px;
   -moz-border-radius: 15px;
   -webkit-border-radius: 15px;
+  border-radius: 15px;
   /*  .translucent(@exampleColor1, 0.5);*/
 
 }
