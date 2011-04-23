@@ -158,20 +158,20 @@ body{
 // ========================= //
 
 // Shiny buttons make people want to click them! Just add the class callToAction to any link!
+// Or mix it in with the color as a parameter!
 
-// Master Color: change this one value to change all states of the button
-@buttonColor: #c97200;
-
-// slave colors
-@defaultStart: @buttonColor + 35%;
-@defaultEnd: @buttonColor;
-@borderColor: @buttonColor - 50%;
-
-.callToAction{
+.callToAction(@buttonColor: #c97200){
+  // slave colors
+  @defaultStart: @buttonColor + 35%;
+  @defaultEnd: @buttonColor;
+  @borderColor: @buttonColor - 50%;
+  
+  // button positioning
   .floatClear;
   margin: 10px 0 0 0;
   padding: 4px 13px 2px 13px;
   
+  // text styles
   font-size: 30px;
   color: #fff;
   text-decoration: none;
@@ -179,6 +179,7 @@ body{
   text-transform: uppercase;
   text-shadow: rgba(0,0,0,0.2) -1px 0, rgba(0,0,0,0.2) 0 -1px, rgba(255,255,255,0.2) 0 1px;
   
+  // box styles
   border: 1px solid @borderColor;
   
   .borderRadius(6px);
@@ -190,32 +191,34 @@ body{
   background: -webkit-gradient(linear, left top, left bottom, from(@defaultStart), color-stop(0.46, @defaultStart), color-stop(0.54, @defaultEnd), to(@defaultEnd)); // Safari 4+, Chrome
   filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d)", @defaultStart, @defaultEnd); // IE6 & 7
   -ms-filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d)", @defaultStart, @defaultEnd); // IE8
-}
-
-.callToAction:hover{
-  color: #fff;
-
-  @start: @defaultStart - 20%;
-  @end: @defaultEnd - 20%;
-
-  background: ((@start + @end) / 2); // Non CSS3 browsers
-  background: -moz-linear-gradient(top, @start, @start 46%, @end 54%, @end); // FF 3.6+
-  background: -webkit-gradient(linear, left top, left bottom, from(@start), color-stop(0.46, @start), color-stop(0.54, @end), to(@end)); // Safari 4+, Chrome
-  filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d)", @start, @end); // IE6 & 7
-  -ms-filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d)", @start, @end); // IE8
-}
-
-.callToAction:active{
-  color: #fff;
-
-  @start: @defaultStart - 40%;
-  @end: @defaultEnd - 40%;
-
-  background: ((@start + @end) / 2); // Non CSS3 browsers
-  background: -moz-linear-gradient(top, @start, @start 46%, @end 54%, @end); // FF 3.6+
-  background: -webkit-gradient(linear, left top, left bottom, from(@start), color-stop(0.46, @start), color-stop(0.54, @end), to(@end)); // Safari 4+, Chrome
-  filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d)", @start, @end); // IE6 & 7
-  -ms-filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d)", @start, @end); // IE8
+  
+  &:hover{
+    color: #fff;
+    
+    // gradient colors
+    @start: @defaultStart - 20%;
+    @end: @defaultEnd - 20%;
+    
+    background: ((@start + @end) / 2); // Non CSS3 browsers
+    background: -moz-linear-gradient(top, @start, @start 46%, @end 54%, @end); // FF 3.6+
+    background: -webkit-gradient(linear, left top, left bottom, from(@start), color-stop(0.46, @start), color-stop(0.54, @end), to(@end)); // Safari 4+, Chrome
+    filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d)", @start, @end); // IE6 & 7
+    -ms-filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d)", @start, @end); // IE8
+  }
+  
+  &:active{
+    color: #fff;
+    
+    // gradient colors
+    @start: @defaultStart - 40%;
+    @end: @defaultEnd - 40%;
+    
+    background: ((@start + @end) / 2); // Non CSS3 browsers
+    background: -moz-linear-gradient(top, @start, @start 46%, @end 54%, @end); // FF 3.6+
+    background: -webkit-gradient(linear, left top, left bottom, from(@start), color-stop(0.46, @start), color-stop(0.54, @end), to(@end)); // Safari 4+, Chrome
+    filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d)", @start, @end); // IE6 & 7
+    -ms-filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d)", @start, @end); // IE8
+  }
 }
 
 

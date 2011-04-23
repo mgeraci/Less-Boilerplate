@@ -74,12 +74,6 @@ pre{
 /* = Header = */
 /* ========== */
 
-/*#shadowHelper{
-  overflow: hidden;
-  padding: 4px 0 10px 0;
-  margin: -4px 0 0 0;
-}*/
-
 #header{
   background: desaturate(@blue, 10%) - 54%;
   padding: 15px 0;
@@ -103,8 +97,9 @@ h1{
   float: left;
   margin: 0 20px 0 0;
   
+  // the {} in the header
   span{
-    color: @buttonColor + 30%;
+    color: @highlight - 20%;
     position: relative;
     bottom: 3px;
   }
@@ -230,6 +225,11 @@ h1{
   }
 }
 
+// call to action example
+#callToActionExample{
+  .callToAction;
+}
+
 // style the floatClear example
 .floatClearExample{.box;}
 
@@ -260,6 +260,7 @@ h1{
 #lastSection{margin-bottom: 10px;}
 #content{padding-bottom: 0;}
 
+
 /* ==================== */
 /* = Download Section = */
 /* ==================== */
@@ -273,19 +274,18 @@ h1{
     float: left;
   }
   
-  .callToAction{
+  #downloadLink{
+    .callToAction;
     float: left;
     margin: 0 10px 0 0;
     position: relative;
     bottom: 10px;
     
-    span{float: none;}
-  }
-}
-
-.callToAction{
-  span{
-    position: relative;
-    bottom: 3px;
+    // parentheses' position is off
+    span{
+      float: none;
+      position: relative;
+      bottom: 2px;
+    }
   }
 }
