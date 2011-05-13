@@ -130,6 +130,27 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   transition: @params; // CSS3
 }
 
+// Rotation (Thanks to Github user clearideaz for figuring out the JavaScript escaping idea!)
+.rotate(@deg: 0){
+  // the math
+  @degree: @deg;
+  @rotation: `this.degree.toJS()`;
+  letter-spacing: @rotation;
+
+/*  @rotation: `parseInt(this.degree.toJS())`;*/
+/*  @degToRadian: `Math.PI * 2 / 360`;*/
+/*  @rad: `this.rotation.toJS() * this.degToRadian.toJS()`;*/
+/*  @M11: `Math.cos(this.rad.toJS())`;*/
+/*  @M21: `Math.sin(this.rad.toJS())`;*/
+  
+  // the properties
+  -moz-transform: rotate(@deg);
+  -webkit-transform: rotate(@deg);
+  -o-transform: rotate(@deg);
+  transform: rotate(@deg);
+/*  filter: e(%("progid:DXImageTransform.Microsoft.Matrix(M11=%d, M12=-%d, M21=%d, M22=%d)", @M11, @M21, @M21, @M11));*/
+}
+
 
 // =========================== //
 // = Centered Content Blocks = //
