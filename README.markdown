@@ -12,6 +12,8 @@ Boilerplate CSS written in [Less.CSS](http://lesscss.org/), the dynamic styleshe
 
 I went through my recent design projects and pulled out these styles that I use all the time to create an easy-to-import stylesheet. They help me get a new design started, and I hope they help you too!
 
+If you like how this looks but you're a SASS coder, check out [SASS Boilerplate](http://mgeraci.github.com/SASS-Boilerplate).
+
 Demo
 ---------
 [Right this way](http://mgeraci.github.com/Less-Boilerplate/).
