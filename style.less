@@ -242,18 +242,19 @@ h1{
 #transition{
   .box;
   width: 360px;
+  height: 65px;
+  overflow: hidden;
+  
+  .css{
+    display: block;
+  }
 }
 
 #transition:hover{
   background: #F5FAA0;
+  height: 190px;
   
   .transition(all 1s ease);
-}
-
-// rotation
-#rotate{
-  .box;
-  .rotate();
 }
 
 // centering variable width
